@@ -10,6 +10,7 @@ Keep the Academy module self-managing so the user never carries management burde
 - `04_outputs/academy/STATE.md` (primary)
 - `04_outputs/academy/` directory tree (to verify file existence matches state)
 - Block summary files in `03_blocks/` when visual status or candidacy needs verification
+- Blueprint catalog index at `04_outputs/academy/[domain]/[author]/blueprint-catalog/catalog-index.md` (when checking catalog state)
 
 # Outputs
 - Updated `04_outputs/academy/STATE.md` after every meaningful action
@@ -28,33 +29,34 @@ Keep the Academy module self-managing so the user never carries management burde
 7. Update the block's row in the Progress table (status, date, notes).
 8. Set the block visual status to `no` unless a canvas already exists.
 9. Increment blocks_completed in YAML frontmatter.
-10. Determine if this was the last block. If so, recommend book synthesis.
-11. Log the session entry.
-12. Report what was done and what comes next.
+10. Check if the completed block's extraction file contains a `## Blueprint Candidates` section. If so, note it in the status report and include "blueprint cataloging available" in the recommended next steps (after visual, before next block).
+11. Determine if this was the last block. If so, recommend book synthesis.
+12. Log the session entry.
+13. Report what was done and what comes next.
 
 ## On visual action
-13. Verify the target block files exist.
-14. If a canvas was created, set visual status to `draft`.
-15. If a canvas was revised and accepted, set visual status to `reviewed`.
-16. Add a concise session log entry.
-17. Keep the recommended next step aligned with the user flow: review canvas if draft, otherwise continue the book.
+14. Verify the target block files exist.
+15. If a canvas was created, set visual status to `draft`.
+16. If a canvas was revised and accepted, set visual status to `reviewed`.
+17. Add a concise session log entry.
+18. Keep the recommended next step aligned with the user flow: review canvas if draft, otherwise continue the book.
 
 ## On phase transition
-18. Update active_phase in YAML frontmatter.
-19. If transitioning to book-synthesis: verify sufficient blocks are complete.
-20. If transitioning to domain-synthesis: verify at least 2 books synthesized.
-21. Log the transition in Session Log.
+19. Update active_phase in YAML frontmatter.
+20. If transitioning to book-synthesis: verify sufficient blocks are complete. Include a note about how many blueprint catalog entries exist and whether any are still draft.
+21. If transitioning to domain-synthesis: verify at least 2 books synthesized.
+22. Log the transition in Session Log.
 
 ## On new book entry
-22. Create the book's folder structure (01_map through 05_synthesis).
-23. Add the book to the Books Tracker table.
-24. Set active_book, reset active_block and blocks_completed.
-25. Route to build-study-itinerary to create the itinerary.
+23. Create the book's folder structure (01_map through 05_synthesis).
+24. Add the book to the Books Tracker table.
+25. Set active_book, reset active_block and blocks_completed.
+26. Route to build-study-itinerary to create the itinerary.
 
 ## Bootstrap (STATE.md does not exist)
-26. Create STATE.md from template.
-27. Scaffold the initial folder structure.
-28. Route to the first book's map creation and itinerary building.
+27. Create STATE.md from template.
+28. Scaffold the initial folder structure.
+29. Route to the first book's map creation and itinerary building.
 
 # Anti-patterns
 - Asking the user "where were we?" -- always read STATE.md.

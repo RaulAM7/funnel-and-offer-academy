@@ -52,18 +52,26 @@ Format: what + why it is flagged.
 Items that seem valuable enough to potentially warrant cross-work synthesis or method-level inclusion.
 Format: what + why it might be elevated.
 
+### Blueprint Candidates
+Concrete funnel architectures, layouts, sequences, or configurations that describe a specific, reproducible funnel structure.
+Format: name + type (funnel-type | layout | sequence | configuration) + components + when to use.
+Only include items with structural specificity -- abstract principles and general insights do not qualify.
+
 5. Write the block summary file (`03_blocks/block-NN/block-NN_resumen.md`):
    - 30-50 lines maximum
    - What the block covered, key takeaways, connection to prior blocks
    - End with `## Visual candidate`
    - Format: `Yes|No` + one-line reason about whether the block deserves a visual canvas
    - If a canvas already exists, mention it by file name in this section
+   - If the block contains concrete funnel architectures, add `## Blueprint candidates`
+   - Format: `Yes|No` + count of candidates + one-line reason
 
 6. Write the extraction file (`04_extraction/extraction-block-NN.md`):
    - Use the categories above as H2 sections
    - Omit empty categories rather than including empty sections
    - Maximum 200 lines per extraction
    - Each item tagged with confidence: stated | inferred | hypothesis
+   - If `## Blueprint Candidates` is present, each item must include: name, type, at least 3 components, and a use case
    - Write all user-facing content in Spanish; keep framework names in original English (e.g. Value Ladder, Attractive Character)
 
 # Anti-patterns
@@ -73,3 +81,4 @@ Format: what + why it might be elevated.
 - Ignoring prior blocks. Continuity matters.
 - Inventing content not present in the source material.
 - Forgetting to flag whether the block is worth visualizing.
+- Flagging abstract patterns as blueprint candidates. Blueprints must describe concrete, reproducible funnel architectures.

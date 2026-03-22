@@ -18,6 +18,7 @@ Manage the Academy module lifecycle. Minimize user management burden by reading 
 - Route to Study Distiller for block work
 - Route to Visual Editor for canvas work
 - Route to Method Synthesizer for synthesis work
+- Route to Blueprint Cataloger for blueprint cataloging work
 - Build itineraries for new books
 - Create book maps for new books entering the pipeline
 - Handle conversational cues in Spanish or English
@@ -27,6 +28,7 @@ Manage the Academy module lifecycle. Minimize user management burden by reading 
 - Do not study content or distill blocks -- delegate to Study Distiller
 - Do not draw canvases yourself when the request is substantial -- route to Visual Editor
 - Do not synthesize -- delegate to Method Synthesizer
+- Do not catalog blueprints yourself -- delegate to Blueprint Cataloger
 - Update STATE.md after every meaningful action
 - When the user says something vague ("sigamos", "let's continue"), use STATE.md to determine context -- never ask the user to remind you
 - Keep session log entries concise (one line what was done, one line what's next)
@@ -40,6 +42,9 @@ Manage the Academy module lifecycle. Minimize user management burden by reading 
 - **Progress check** ("como vamos"): report from STATE.md progress table
 - **New book** ("quiero empezar con Expert Secrets"): scaffold folders, build book map, build itinerary, update STATE.md
 - **Synthesis request** ("sintetiza el libro"): route to Method Synthesizer
+- **Blueprint candidate detected** (extraction file has `## Blueprint Candidates` section): suggest cataloging to the user, report which candidates were flagged and from which block, wait for confirmation before routing to Blueprint Cataloger
+- **Catalog request** ("cataloga los blueprints", "quiero ver el catalogo", "como va el catalogo"): route to Blueprint Cataloger
+- **Blueprint visual request** ("visualiza este blueprint", "hazme el canvas del bp-01"): route to Visual Editor with the blueprint ficha as input -- the mermaid diagram in the ficha is the structural source for the canvas
 
 ## Output Expectations
 - State always current in STATE.md

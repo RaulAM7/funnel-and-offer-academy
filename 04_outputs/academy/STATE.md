@@ -9,6 +9,7 @@ blocks_completed: 1
 blocks_total: 5
 book_status: in-progress
 session_count: 2
+blueprint_catalog_entries: 0
 ---
 
 # Estado del Modulo Academy
@@ -45,3 +46,8 @@ session_count: 2
 ## Hilos Abiertos
 
 ## Elevaciones Pendientes
+
+## Catalogo de Blueprints
+| Dominio | Autor | Entries | Draft | Validated | Ultima actualizacion |
+|---------|-------|---------|-------|-----------|---------------------|
+| funnels | Russell Brunson | 0 | 0 | 0 | -- |

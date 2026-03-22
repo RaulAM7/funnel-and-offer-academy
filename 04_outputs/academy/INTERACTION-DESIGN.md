@@ -19,7 +19,11 @@ Abre una sesion nueva y dice algo como "vamos con el primer bloque", "sigamos", 
 7. Si confirmas la visualizacion, Claude enruta a `visual-editor`:
    - usa `Excalidraw MCP` si esta disponible
    - y si no, cae a un fallback local que genera el `.excalidraw`
-8. Actualiza `STATE.md` — bloque marcado como completado, estado visual actualizado, log de sesion actualizado, siguiente paso propuesto
+8. Si la extraccion del bloque incluye candidatos a blueprint (funnel types, layouts, configuraciones concretas), Claude puede sugerir una cuarta accion opcional:
+   - Catalogar los blueprints detectados en `blueprint-catalog/`
+   - Solo para arquitecturas concretas de funnel, no principios abstractos
+   - El usuario confirma antes de que Claude catalogue
+9. Actualiza `STATE.md` — bloque marcado como completado, estado visual actualizado, log de sesion actualizado, siguiente paso propuesto
 
 ### El matiz clave: es conversacional, no automatico
 
@@ -47,6 +51,10 @@ La dinamica tipica sera: Claude procesa el bloque, te presenta lo que ha sacado,
 | "revisa el canvas" | Compara el canvas actual contra el markdown y propone cambios sin sobreescribir por defecto |
 | "aplica cambios al canvas" | Actualiza el `.excalidraw` existente |
 | "sintetiza el libro" | Lanza sintesis de la obra (si hay suficientes bloques completados) |
+| "cataloga los blueprints" / "actualiza el catalogo" | Lee las extracciones, identifica candidatos a blueprint no catalogados, los normaliza y anade al catalogo |
+| "quiero ver el catalogo" / "como va el catalogo" | Muestra el indice del catalogo de blueprints con estado y resumen |
+| "valida este blueprint" | Busca confirmacion en multiples fuentes y actualiza el estado de draft a validated |
+| "visualiza este blueprint" / "hazme el canvas del bp-01" | Lee la ficha del blueprint, usa el mermaid como fuente estructural, genera canvas Excalidraw |
 
 ## Principio central
 
@@ -62,3 +70,4 @@ La dinamica tipica sera: Claude procesa el bloque, te presenta lo que ha sacado,
 - El usuario: estudia, lee, reflexiona, toma notas, conversa
 - Claude: organiza, enruta, registra, sintetiza, mantiene el modulo vivo
 - Visual Editor: aparece solo bajo demanda para convertir frameworks densos en mapa visual consumible
+- Catalogo de blueprints: aparece cuando el bloque contiene funnel types concretos (bloques 03-05 de DotCom Secrets seran los principales candidatos)

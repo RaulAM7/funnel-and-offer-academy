@@ -14,3 +14,4 @@
 - `visualize-study-block` (medium/recurring): turn a studied block into an Excalidraw canvas, review an existing canvas, or apply revisions after markdown distillation.
 - `synthesize-book` (medium): close and consolidate a book after blocks are studied. Produces book-level synthesis.
 - `synthesize-domain` (heavy): cross-reference multiple books within a domain. Produces domain synthesis and method drafts.
+- `catalog-blueprints` (light/recurring): normalize funnel blueprints from extraction files into the author-level blueprint catalog. Funnels domain only for now.

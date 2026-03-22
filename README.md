@@ -1,169 +1,195 @@
-# Funnel & Offer Academy
+# Funnel & Offer Design Academy
 
-Repositorio `docs-first` para aprendizaje aplicado, destilacion metodologica y produccion de activos operativos sobre `offer design` y `funnel design`.
+> Si estructuras bien ofertas, mensajes, funnels y conversion, dejas de tener una web que "existe" y pasas a tener un sistema comercial que escala.
 
-No es un proyecto de software tradicional. Es una combinacion de:
-- academia interna
-- laboratorio de I+D
-- cantera de skills y agentes
-- memoria persistente de trabajo
+---
 
-La idea central es simple: estudiar buenas fuentes, destilar valor real, convertirlo en metodologia propia y traducirlo a activos reutilizables.
+## De que va esto
 
-## Que resuelve este repo
+Este repo existe porque hay una diferencia enorme entre **consumir contenido** sobre funnels y offers y **convertir ese contenido en un sistema que funcione**.
 
-- Ordena estudio y destilacion de obras base de Alex Hormozi, Russell Brunson y otras referencias.
-- Evita que el conocimiento se quede en resumentitis, notas sueltas o consumo pasivo.
-- Convierte aprendizaje en outputs operativos: skills, agentes, playbooks, blueprints, workflows.
-- Alimenta sistemas downstream del ecosistema EduKami / Reboot Academy / Skilland.
+La mayoria de gente lee a Brunson, a Hormozi, a los referentes del sector, y se queda en:
+- resúmenes que no se usan
+- notas que se pierden
+- ideas sueltas que no conectan entre si
+
+Este repo hace lo contrario. Es un **motor de transformacion de conocimiento**:
+- estudia obras de referencia de forma sistematica
+- extrae lo que realmente importa
+- lo estructura en activos reutilizables
+- y lo eleva progresivamente hacia una metodologia propia
+
+No es una biblioteca. No es una coleccion de resumenes.
+Es una academia interna donde Claude Code gestiona la complejidad y el usuario se centra en estudiar y pensar.
+
+---
+
+## La tesis de fondo
+
+El punto de partida viene de DotCom Secrets, pero aplica a todo el repo:
+
+**Mejor arquitectura comercial = mas ingresos, mas escalabilidad, mas capacidad de servir.**
+
+Eso se consigue dominando cinco cosas:
+
+```text
+1. Estructurar productos y servicios       → ganar mas con el mismo trafico
+2. Comunicar para que el cliente ascienda   → mas valor percibido, mas ventas
+3. Disenar funnels por fases                → sistema, no paginas sueltas
+4. Usar building blocks y funnels probados  → frameworks > improvisacion
+5. Aplicar scripts de conversion            → vender en cada etapa del recorrido
+```
+
+El resultado final: **la empresa pasa de tener presencia online a tener una maquina de ventas y marketing escalable.**
+
+---
+
+## Que produce este repo
+
+No outputs abstractos. Activos concretos:
+
+- **Extracciones estructuradas** por bloque de estudio: insights, principios, playbooks, patrones, ejemplos
+- **Sintesis de obra** que destilan lo esencial de cada libro
+- **Sintesis de dominio** que cruzan varias obras y detectan convergencias
+- **Catalogo de blueprints** con funnel types, layouts y configuraciones normalizadas
+- **Metodo interno** que emerge del cruce de todo lo anterior
+
+Cada pieza tiene trazabilidad: se sabe de donde viene, con que confianza y para que sirve.
+
+---
 
 ## Principios de trabajo
 
-- `Distillation > accumulation`: no interesa guardar mucho; interesa guardar bien.
-- `Assets > summaries`: la unidad de valor es el activo generado, no el libro leido.
-- `Own method > author loyalty`: los autores son insumo, no destino.
-- `NotebookLM = exploracion`, `repo = memoria persistente y produccion`.
-- `Docs-first`: primero claridad conceptual, estructura y metodo; luego tooling o runtime si hace falta.
+- `Destilacion > acumulacion` — no interesa guardar mucho; interesa guardar bien
+- `Activos > resumenes` — la unidad de valor es el activo generado, no el libro leido
+- `Metodo propio > lealtad al autor` — los autores son insumo, no destino
+- `El usuario estudia, Claude gestiona` — la complejidad estructural la absorbe el sistema
+- `Docs-first` — primero claridad conceptual; tooling solo si hace falta
+
+---
+
+## Dominios
+
+| Dominio | Foco | Corpus principal |
+|---------|------|------------------|
+| **Funnels** | arquitectura comercial, conversion, escalado | Russell Brunson (DotCom Secrets, Expert Secrets, Traffic Secrets) |
+| **Offers** | diseno de oferta, pricing, packaging, valor | Alex Hormozi ($100M Offers, $100M Leads) |
+
+---
 
 ## Estado actual
 
-- Modulo activo: `Academy`
-- Dominio activo: `funnels`
-- Autor activo: `Russell Brunson`
-- Libro activo: `DotCom Secrets`
-- Estado del libro: `1/5` bloques completados
-- Capa visual: `integrada` (`Excalidraw MCP` project-scoped con fallback local a `.excalidraw`)
-- Siguiente paso sugerido: revisar `block-01_canvas.excalidraw` con el usuario y luego empezar `block-02 (Communication Funnel)`
+- **Modulo activo**: Academy
+- **Dominio**: funnels
+- **Libro**: DotCom Secrets (Russell Brunson)
+- **Progreso**: 1/5 bloques completados
+- **Blueprint catalog**: activado, vacio (los funnel types concretos llegan en bloques 03-05)
+- **Punto de control vivo**: `04_outputs/academy/STATE.md`
 
-Punto de control vivo:
-- `04_outputs/academy/STATE.md`
+---
 
-## Como esta organizado
+## Estructura del repo
 
 ```text
-00_inbox/       material crudo de entrada
-01_harness/     reglas globales, stack y taskflow
-02_context/     memoria destilada del proyecto
-03_specs/       spec activa, backlog y decisiones
-04_outputs/     entregables finales
-05_scratch/     trabajo intermedio y descartes utiles
-shared/         agentes y skills reutilizables
-runners/        notas cortas para operar con agentes
+00_inbox/        material crudo de entrada (libros, fuentes, PDFs convertidos)
+01_harness/      reglas globales, stack, taskflow, indice de skills
+02_context/      memoria destilada del proyecto (BRIEF, FACTS, CONSTRAINTS, GLOSSARY)
+03_specs/        spec activa, backlog y decisiones
+04_outputs/      entregables finales — aqui vive el modulo Academy
+05_scratch/      trabajo intermedio y descartes utiles
+shared/          agentes y skills reutilizables
+runners/         notas para operar con agentes externos
 ```
 
-## Flujo de trabajo del repo
+### Arbol del modulo Academy
 
-El repo sigue una secuencia fija:
+```text
+04_outputs/academy/
+├── STATE.md                          ← estado vivo del modulo
+├── INTERACTION-DESIGN.md             ← como funciona la interaccion usuario-Claude
+├── funnels/
+│   └── russell-brunson/
+│       ├── dotcom-secrets/
+│       │   ├── 01_map/               ← que es el libro, estructura, posicion en el corpus
+│       │   ├── 02_itinerary/         ← bloques de estudio, secuencia, densidad
+│       │   ├── 03_blocks/            ← resumen + canvas por bloque
+│       │   ├── 04_extraction/        ← extraccion estructurada por bloque
+│       │   └── 05_synthesis/         ← sintesis de la obra completa
+│       ├── blueprint-catalog/        ← catalogo normalizado de funnel types
+│       ├── cross-work-synthesis/     ← cruce entre libros del mismo autor
+│       └── internal-method/          ← metodo interno emergente
+└── offers/
+    └── alex-hormozi/
+        ├── cross-work-synthesis/
+        └── internal-method/
+```
 
-1. `Seed`
-   Mete material crudo en `00_inbox/`.
-2. `Distill`
-   Convierte ese material en contexto estable dentro de `02_context/`.
-3. `Spec`
-   Trabaja desde una sola spec activa en `03_specs/now/`.
-4. `Ship`
-   Genera outputs finales en `04_outputs/`.
-5. `QA`
-   Verifica criterios de aceptacion, unknowns, riesgos y siguiente paso.
+---
 
-Documentos base que hay que leer antes de operar:
-- `01_harness/RULES.md`
-- `01_harness/STACK.md`
-- `01_harness/TASKFLOW.md`
+## Agentes y skills
 
-## Mapa operativo rapido
+### Sistema base del harness
+- **Agentes**: `distiller`, `planner`, `prospector`, `maker`, `reviewer`
+- **Skills**: `initial-context-building`, `distill-context`, `write-spec`, `ship-output`, `qa-review`
 
-### 1. Si acabas de abrir el repo
+### Especificos de Academy
+- **Agentes**: `academy-orchestrator`, `study-distiller`, `method-synthesizer`, `blueprint-cataloger`, `visual-editor`
+- **Skills**: `manage-academy-cycle`, `build-study-itinerary`, `distill-study-block`, `visualize-study-block`, `synthesize-book`, `synthesize-domain`, `catalog-blueprints`
+
+Indice completo: `01_harness/SKILLS_INDEX.md`
+
+---
+
+## Como se usa
+
+### Si acabas de abrir el repo
 
 Lee en este orden:
-
 1. `01_harness/RULES.md`
 2. `01_harness/STACK.md`
 3. `01_harness/TASKFLOW.md`
 4. `02_context/BRIEF.md`
-5. `02_context/FACTS.md`
-6. `02_context/CONSTRAINTS.md`
-7. `03_specs/now/001_now.md`
 
-### 2. Si vas a continuar trabajo del modulo Academy
+### Si vas a continuar el modulo Academy
 
-Empieza aqui:
+1. `04_outputs/academy/STATE.md` — donde estamos
+2. `04_outputs/academy/INTERACTION-DESIGN.md` — como funciona
+3. Di algo como "sigamos", "donde lo dejamos" o "vamos con el siguiente bloque"
 
-1. `04_outputs/academy/STATE.md`
-2. `04_outputs/academy/INTERACTION-DESIGN.md`
-3. `04_outputs/academy/funnels/russell-brunson/dotcom-secrets/02_itinerary/itinerary.md`
-4. El source correspondiente en `00_inbox/`
+### Frases que el sistema entiende
 
-### 3. Si vas a producir algo nuevo
+| Dices | Pasa |
+|-------|------|
+| "sigamos" / "donde lo dejamos" | Lee estado, reporta posicion, propone siguiente paso |
+| "vamos con el siguiente bloque" | Procesa el bloque que toca |
+| "como vamos" | Muestra progreso |
+| "cataloga los blueprints" | Normaliza funnel types detectados en las extracciones |
+| "sintetiza el libro" | Lanza sintesis de la obra |
 
-- Usa una sola spec activa.
-- Carga solo la skill necesaria desde `shared/skills/`.
-- Escribe el entregable final en `04_outputs/`.
-- Deja borradores o residuos de trabajo en `05_scratch/`.
+---
 
-## Contexto estable del proyecto
-
-`02_context/` concentra la memoria util del sistema:
-
-- `BRIEF.md`: que es este repo, para quien es y como se mide el exito
-- `FACTS.md`: hechos verificados y nivel de confianza
-- `CONSTRAINTS.md`: limites y no-negociables
-- `GLOSSARY.md`: terminos del dominio
-- `LINKS.md`: referencias externas
-
-Esto debe seguir siendo legible en pocos minutos. No es un segundo inbox.
-
-## Modulo Academy
-
-El modulo Academy convierte una obra de referencia en conocimiento estructurado por bloques y luego lo eleva hacia metodologia propia.
-
-Ahora mismo ya existen:
-
-- Infraestructura base del modulo
-- `STATE.md` para continuidad entre sesiones
-- mapa e itinerario inicial de `DotCom Secrets`
-- primer bloque destilado y su extraccion
-- agentes y skills especificos para el ciclo de estudio
-
-Ruta actual del trabajo activo:
+## Flujo de trabajo general del repo
 
 ```text
-04_outputs/academy/funnels/russell-brunson/dotcom-secrets/
-├── 01_map/
-├── 02_itinerary/
-├── 03_blocks/
-├── 04_extraction/
-└── 05_synthesis/
+1. Seed      → material crudo en 00_inbox/
+2. Distill   → contexto estable en 02_context/
+3. Spec      → una sola spec activa en 03_specs/now/
+4. Ship      → outputs finales en 04_outputs/
+5. QA        → verificacion contra criterios de aceptacion
 ```
 
-## Agentes y skills disponibles
-
-Base del harness:
-- Agentes: `distiller`, `planner`, `prospector`, `maker`, `reviewer`
-- Skills: `initial-context-building`, `distill-context`, `write-spec`, `ship-output`, `qa-review`
-
-Especificos de Academy:
-- Agentes: `academy-orchestrator`, `study-distiller`, `visual-editor`, `method-synthesizer`
-- Skills: `manage-academy-cycle`, `build-study-itinerary`, `distill-study-block`, `visualize-study-block`, `synthesize-book`, `synthesize-domain`
-
-Indice rapido:
-- `01_harness/SKILLS_INDEX.md`
+---
 
 ## Que no debe pasar
 
-- No usar `00_inbox/` como archivo permanente.
-- No copiar material crudo a working files sin destilarlo.
-- No trabajar varias specs activas a la vez.
-- No convertir el repo en biblioteca muerta o coleccion de resumenes.
-- No mezclar exploracion live con memoria persistente.
+- No usar `00_inbox/` como archivo permanente
+- No trabajar varias specs activas a la vez
+- No convertir el repo en biblioteca muerta o coleccion de resumenes
+- No mezclar exploracion live con memoria persistente
+- No auto-avanzar sin confirmacion del usuario
 
-## Entradas utiles
+---
 
-- Instrucciones para agentes: `AGENTS.md`
-- Runner Codex: `runners/codex.md`
-- Runner Claude: `runners/claude.md`
-- Diseno fundacional del modulo: `04_outputs/academy/academy-module-foundational-design.md`
+## En una frase
 
-## Resumen en una frase
-
-Este repo existe para convertir estudio serio de offers y funnels en metodologia propia y activos operativos reutilizables, con un flujo disciplinado de `inbox -> context -> spec -> output -> QA`.
+Este repo convierte estudio serio de funnels y offers en metodologia propia y activos operativos reutilizables, con un sistema donde **el usuario estudia y Claude gestiona**.
