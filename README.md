@@ -32,7 +32,8 @@ La idea central es simple: estudiar buenas fuentes, destilar valor real, convert
 - Autor activo: `Russell Brunson`
 - Libro activo: `DotCom Secrets`
 - Estado del libro: `1/5` bloques completados
-- Siguiente paso sugerido: empezar `block-02 (Communication Funnel)`
+- Capa visual: `integrada` (`Excalidraw MCP` project-scoped con fallback local a `.excalidraw`)
+- Siguiente paso sugerido: revisar `block-01_canvas.excalidraw` con el usuario y luego empezar `block-02 (Communication Funnel)`
 
 Punto de control vivo:
 - `04_outputs/academy/STATE.md`
@@ -142,8 +143,8 @@ Base del harness:
 - Skills: `initial-context-building`, `distill-context`, `write-spec`, `ship-output`, `qa-review`
 
 Especificos de Academy:
-- Agentes: `academy-orchestrator`, `study-distiller`, `method-synthesizer`
-- Skills: `manage-academy-cycle`, `build-study-itinerary`, `distill-study-block`, `synthesize-book`, `synthesize-domain`
+- Agentes: `academy-orchestrator`, `study-distiller`, `visual-editor`, `method-synthesizer`
+- Skills: `manage-academy-cycle`, `build-study-itinerary`, `distill-study-block`, `visualize-study-block`, `synthesize-book`, `synthesize-domain`
 
 Indice rapido:
 - `01_harness/SKILLS_INDEX.md`

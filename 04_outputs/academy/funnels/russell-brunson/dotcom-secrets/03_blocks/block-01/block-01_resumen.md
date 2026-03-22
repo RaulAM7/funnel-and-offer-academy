@@ -32,3 +32,7 @@ Los cinco frameworks fundacionales del sistema Brunson. Establece la base concep
 ## Densidad y notas
 
 Bloque denso en frameworks. Todos los conceptos son interdependientes y se referencian mutuamente. Es el cimiento del libro entero.
+
+## Visual candidate
+
+Yes — bloque fundacional, muy framework-heavy y con alto valor de image recall. Canvas maestro relacionado: `block-01_canvas.excalidraw`.

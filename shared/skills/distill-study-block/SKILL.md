@@ -12,7 +12,7 @@ Transform one block of source material into structured, reusable knowledge.
 - Previous block extractions in `04_extraction/` (for continuity and cross-reference)
 
 # Outputs
-- `04_outputs/academy/[domain]/[author]/[book]/03_blocks/block-NN_descriptor.md`
+- `04_outputs/academy/[domain]/[author]/[book]/03_blocks/block-NN/block-NN_resumen.md`
 - `04_outputs/academy/[domain]/[author]/[book]/04_extraction/extraction-block-NN.md`
 
 # Procedure
@@ -52,9 +52,12 @@ Format: what + why it is flagged.
 Items that seem valuable enough to potentially warrant cross-work synthesis or method-level inclusion.
 Format: what + why it might be elevated.
 
-5. Write the block summary file (`03_blocks/block-NN_descriptor.md`):
+5. Write the block summary file (`03_blocks/block-NN/block-NN_resumen.md`):
    - 30-50 lines maximum
    - What the block covered, key takeaways, connection to prior blocks
+   - End with `## Visual candidate`
+   - Format: `Yes|No` + one-line reason about whether the block deserves a visual canvas
+   - If a canvas already exists, mention it by file name in this section
 
 6. Write the extraction file (`04_extraction/extraction-block-NN.md`):
    - Use the categories above as H2 sections
@@ -69,3 +72,4 @@ Format: what + why it might be elevated.
 - Extraction files that exceed 200 lines. Compress or split.
 - Ignoring prior blocks. Continuity matters.
 - Inventing content not present in the source material.
+- Forgetting to flag whether the block is worth visualizing.

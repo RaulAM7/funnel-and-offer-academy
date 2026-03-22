@@ -14,3 +14,4 @@ One line per item.
 - [ ] [inferred] Disenar itinerario de estudio ordenado por dominio (funnels primero, offers despues) con secuencia de bloques
 - [ ] [inferred] Construir primer borrador de metodologia propia de funnel design integrando Russell + Hormozi + Valdo
 - [ ] [inferred] Definir taxonomia de tipos de funnel adaptada al contexto del usuario (formacion, consultoria, productos digitales)
+- [ ] [inferred] Extender la capa visual de Academy a los bloques restantes y consolidar una libreria interna de diagramas de recall

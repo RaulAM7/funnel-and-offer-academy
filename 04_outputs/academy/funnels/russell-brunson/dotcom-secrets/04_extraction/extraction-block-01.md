@@ -117,3 +117,7 @@
 - **Value Ladder** -- Framework central que probablemente cruza con los frameworks de Hormozi (Value Equation, Grand Slam Offer). Candidato claro a sintesis cruzada entre autores del dominio funnels + offers. [stated]
 - **Secret Formula (4 preguntas)** -- Herramienta de posicionamiento que podria integrarse con el Dream Customer profiling de Traffic Secrets y con el targeting de Hormozi. [inferred]
 - **Principio "spend the most to acquire"** -- Aparece en DotCom Secrets como cita de Dan Kennedy. Probablemente reaparece en Traffic Secrets y potencialmente en los frameworks de Hormozi. Candidato a principio unificador del dominio. [inferred]
+
+## Visual Candidate
+
+- **yes** -- Bloque fundacional, con interdependencias fuertes entre frameworks y alto valor de recall espacial. Prioridad alta para canvas visual. [inferred]

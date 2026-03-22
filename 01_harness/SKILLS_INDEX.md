@@ -11,5 +11,6 @@
 - `manage-academy-cycle` (medium/orchestration): read state, decide next step, update progress, maintain session continuity, route work. Entry point for any Academy interaction.
 - `build-study-itinerary` (light): divide a book into logical study blocks, define sequence and density. Use when starting a new book.
 - `distill-study-block` (medium/recurring): process one study block -- extract insights, principles, playbooks, patterns, examples. Most-used Academy skill.
+- `visualize-study-block` (medium/recurring): turn a studied block into an Excalidraw canvas, review an existing canvas, or apply revisions after markdown distillation.
 - `synthesize-book` (medium): close and consolidate a book after blocks are studied. Produces book-level synthesis.
 - `synthesize-domain` (heavy): cross-reference multiple books within a domain. Produces domain synthesis and method drafts.
