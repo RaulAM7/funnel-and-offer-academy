@@ -15,3 +15,4 @@ One line per item.
 - [ ] [inferred] Construir primer borrador de metodologia propia de funnel design integrando Russell + Hormozi + Valdo
 - [ ] [inferred] Definir taxonomia de tipos de funnel adaptada al contexto del usuario (formacion, consultoria, productos digitales)
 - [ ] [inferred] Extender la capa visual de Academy a los bloques restantes y consolidar una libreria interna de diagramas de recall
+- [ ] [user] Skill: Secret Formula Wizard -- guia conversacional para aplicar las 4 preguntas (Who/Where/Bait/Result) a un producto concreto. Inputs: ICP mapeado (skill existente) + interrogatorio + contexto. Esperar a cerrar minimo bloque 03 (Secret #6 enriquece WHO, Secret #9 enriquece Bait/Result). Ideal: post-libro.
