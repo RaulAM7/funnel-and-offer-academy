@@ -1,3 +1,5 @@
+> Superseded: usar `2026-06-07_personalization_rules.md` como reglas finales para CRM/GWS.
+
 # Email 01 Personalization Rules v1 — SkilLand IA Mujeres
 
 ## Objetivo
