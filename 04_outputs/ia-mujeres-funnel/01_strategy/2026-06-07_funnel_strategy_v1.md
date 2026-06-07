@@ -1,145 +1,146 @@
-# Funnel Strategy v1 — IA Mujeres
+# Funnel Strategy v1 — SkilLand IA Mujeres
 
-- Date: 2026-06-07
-- Phase: 6
-- Business Line: `SkilLand IA Mujeres`
-- Campaign: `IA Mujeres 2026`
+## Nota de estado Fase 6.1
+
+Este documento incorpora feedback humano posterior a la primera pasada de Fase 6. La estrategia base se mantiene, pero el paso operativo ya no se formula como un piloto estrategico restrictivo. El enfoque correcto es envio progresivo por tandas pequenas, revision humana de drafts y cobertura del dataset actual si la calidad de datos lo permite.
 
 ## Tesis estrategica
 
-SkilLand IA Mujeres no debe entrar en el mercado como un curso de IA para mujeres. Debe entrar como una via concreta para que cabildos y ayuntamientos conviertan igualdad digital, empleabilidad y desarrollo territorial en un programa ejecutable y medible.
+SkilLand IA Mujeres no debe presentarse como un curso de IA para mujeres. La propuesta es ayudar a entidades publicas, sociales, educativas y empresariales a desplegar programas de empoderamiento femenino en Inteligencia Artificial, combinando diagnostico, plataforma, itinerarios, microcredenciales, acompanamiento y medicion de impacto.
 
-La tesis comercial correcta es:
-
-> SkilLand IA Mujeres ayuda a entidades publicas, sociales, educativas y empresariales a desplegar programas de empoderamiento femenino en IA mediante diagnostico, plataforma, itinerarios, microcredenciales, acompanamiento y medicion de impacto.
+La campana debe abrir conversaciones institucionales, no cerrar ventas en frio.
 
 ## Objetivo del funnel
 
-Abrir conversaciones institucionales cualificadas con cabildos y ayuntamientos canarios sobre como activar un piloto de IA Mujeres alineado con igualdad, empleo, politicas sociales o desarrollo local.
+Abrir una conversacion estrategica con cabildos y ayuntamientos canarios con competencias o areas relacionadas con igualdad, empleo, mujer, politicas sociales o desarrollo local.
+
+El resultado deseado del primer contacto es una primera reunion para valorar encaje, contexto territorial y posible colaboracion.
+
+## Publico prioritario
+
+- Cabildos con areas de Igualdad, Empleo, Mujer, Politicas Sociales o Desarrollo Local.
+- Ayuntamientos con areas de Igualdad, Empleo, Desarrollo Local, Mujer o Politicas Sociales.
+- Registros publicos actuales del CRM con datos suficientemente usables.
+
+Asociaciones quedan fuera de esta tanda y pasan a segundo sprint porque no hay dataset tabular suficiente.
 
 ## Hipotesis comercial
 
-Si el primer contacto se plantea como conversacion institucional sobre riesgo de brecha, preparacion del territorio y posibilidad de piloto medible, los contactos publicos mostraran mas disposicion a responder que si se les presenta una oferta de curso cerrada.
+Si el primer contacto se plantea como una reflexion institucional sobre IA, mujeres y futuro del trabajo, y se apoya en una propuesta breve de colaboracion, las entidades publicas tendran mas probabilidad de responder que si reciben una oferta cerrada de formacion.
 
-## Audiencia prioritaria
-
-1. Cabildos con area clara de Igualdad.
-2. Ayuntamientos con area clara de Igualdad.
-3. Cabildos con area clara de Empleo.
-4. Cabildos con area clara de Politicas Sociales.
-5. Ayuntamientos con area clara de Empleo o Desarrollo Local.
-6. Entidades publicas mixtas o ambiguas con encaje razonable.
-7. Registros en revision manual, fuera del primer lote operativo.
+La clave no es pedir una compra. La clave es pedir una conversacion razonable sobre un reto que ya afecta a igualdad, empleo y oportunidades reales en el territorio.
 
 ## Propuesta de valor
 
-SkilLand ofrece a la entidad:
+SkilLand IA Mujeres ofrece una forma de convertir la preocupacion por la brecha de IA en una actuacion territorial medible:
 
-- diagnostico inicial del colectivo y del objetivo institucional;
-- diseno de programa adaptado al territorio o area;
-- plataforma propia con itinerarios y microcredenciales;
-- acompanamiento y modalidad flexible, intensiva o hibrida;
-- analitica y reporting de impacto;
-- una via prudente de piloto antes del despliegue a escala.
+- diagnostico inicial y conversacion con la entidad;
+- accion de divulgacion o sensibilizacion en territorio si encaja;
+- diseno de proyecto a medida con objetivos, itinerarios y KPIs de impacto;
+- plataforma, acompanamiento y microcredenciales;
+- enfoque de empoderamiento femenino, no de formacion generica.
 
 ## Angulo de entrada
 
-El angulo de entrada no es formativo. Es institucional.
+La IA puede convertirse en una nueva capa de exclusion laboral femenina o en una oportunidad historica para cerrar brechas, dependiendo de si se actua a tiempo.
 
-El mensaje base debe ser:
-
-- la IA ya esta alterando la competitividad laboral y la capacidad de acceso a oportunidades;
-- si no se interviene, la brecha digital y laboral femenina puede agravarse;
-- la entidad tiene una responsabilidad real sobre igualdad, empleo o desarrollo;
-- SkilLand puede co-disenar un piloto medible, no una accion simbolica.
+En Canarias, el angulo territorial es especialmente relevante: existe talento femenino, formacion y capacidad, pero no siempre se convierte en empleo cualificado, autonomia economica o acceso a los nuevos roles que esta creando la tecnologia.
 
 ## Tono
 
-El funnel debe sonar:
-
-- institucional;
-- claro;
-- serio;
-- propositivo;
-- orientado a impacto;
-- nada paternalista;
-- nada agresivo.
+- Institucional, humano y directo.
+- Cercano sin parecer informal.
+- Firme sin alarmismo.
+- Cero paternalista.
+- Cero venta agresiva.
+- Cero framing de "curso basico para mujeres".
+- Orientado a colaboracion, diagnostico y responsabilidad institucional.
 
 ## Promesa prudente
 
-La promesa no debe ser empleo garantizado ni transformacion total. Debe ser:
+No prometer transformacion garantizada ni metricas no documentadas. La promesa prudente es:
 
-> poner en marcha una conversacion y, si encaja, un piloto medible que ayude a preparar a mujeres reales del territorio para una economia atravesada por la IA.
+> abrir una conversacion para valorar como una entidad publica puede convertir el reto de la IA y la brecha de genero en una actuacion territorial concreta, medible y adaptada a sus objetivos.
 
 ## Pilares narrativos
 
-### 1. Igualdad digital como responsabilidad publica
+### 1. Origen e impacto de Reboot
 
-No es una moda tecnologica. Es una cuestion de acceso a oportunidades, autonomia y desarrollo del territorio.
+Reboot Academy nacio en Canarias para ayudar a personas y colectivos con barreras de acceso a oportunidades tecnologicas a reiniciar su trayectoria profesional. La cifra de mas de 1.000 estudiantes debe usarse como prueba de impacto acumulado, no como dato aislado de autoridad.
 
-### 2. La IA ya esta reconfigurando trabajo y productividad
+### 2. Evolucion institucional
 
-El coste de esperar es alto. La urgencia existe, pero debe comunicarse sin alarmismo.
+El Instituto de Innovacion Tecnologica y Educativa para el Desarrollo permite ampliar metodologia, tecnologia, alcance e impacto mas alla de la academia original.
 
-### 3. La barrera de entrada es mas baja que antes
+### 3. Legitimidad en igualdad y STEAM
 
-La IA generativa permite empezar desde lenguaje natural y problemas reales. Eso hace viable una intervencion inclusiva para perfiles no tecnicos.
+WISE Canarias / Women In STEAM Empowerment Canarias aporta legitimidad especifica en mujeres, igualdad, STEAM e IA. No se deben inventar datos adicionales sobre Romina o WISE.
 
-### 4. La entidad no necesita improvisar
+### 4. Riesgo y oportunidad
 
-SkilLand aporta metodo, plataforma, itinerarios, microcredenciales y medicion de impacto.
+La IA puede ampliar brechas de empleo, acceso y autonomia economica, pero tambien puede ser una oportunidad historica si las entidades actuan a tiempo.
 
-### 5. La mejor puerta de entrada es un piloto
+### 5. Colaboracion territorial
 
-No pedir una compra grande en frio. Pedir una conversacion sobre diagnostico y una posible prueba controlada.
+La puerta de entrada es una primera reunion, no una propuesta cerrada. Si hay encaje, puede evolucionar hacia divulgacion en territorio y proyecto a medida.
 
 ## CTA principal
 
-Reunion de diagnostico institucional o territorial para valorar encaje de un piloto IA Mujeres.
+Primera reunion para valorar si el enfoque puede encajar con los objetivos de la entidad.
+
+CTA recomendado:
+
+> ¿Tendria sentido que lo hablaramos en una primera reunion? Podemos adaptarnos al formato que les resulte mas comodo: llamada, videollamada o encuentro presencial.
 
 ## CTA secundario
 
-Compartir dossier o explorar una propuesta de piloto solo despues de una senal de interes real.
+Derivacion a la persona o area responsable cuando el email llegue a un buzon generico o institucional.
+
+Ejemplo:
+
+> Si no es la persona adecuada, agradeceria que pudiera derivarlo al area responsable de igualdad, empleo o desarrollo local.
+
+## Adjunto de Email 1
+
+- Adjuntar la presentacion corta: `Mujeres, IA y el futuro del Trabajo - Presentacion corta — SkilLand.pdf`.
+- No adjuntar el dossier largo en el primer contacto.
+- Usar el dossier largo solo como activo posterior para contactos que respondan, seguimiento o profundizacion.
+
+## Logica operativa de envio
+
+- Usar una plantilla unificada para la primera tanda.
+- Personalizar de forma ligera segun datos reales disponibles.
+- Enviar por tandas pequenas de 5-10 o ritmo similar.
+- Revisar drafts manualmente antes del envio.
+- No automatizar agresivamente.
+- Contactar todo el dataset actual de 100+ registros si la calidad de datos lo permite.
+- Excluir o revisar manualmente registros con datos incompletos, duplicados, ambiguos o emails no usables.
 
 ## Que NO debe hacer el funnel
 
-- No vender un curso generico.
-- No sonar a campana de venta agresiva.
-- No depender de aperturas de email.
-- No asumir que existe una persona nominal cuando el contacto es de area.
-- No empujar propuesta economica antes de diagnostico.
-- No prometer resultados laborales no verificables.
+- No vender directamente un curso.
+- No sonar a campana masiva impersonal.
+- No depender de tracking de apertura.
+- No usar claims no documentados.
+- No inventar bio, partners, observatorios ni resultados.
+- No reabrir Business Line vs Campaign.
+- No bloquearse por workflows tecnicos que corresponden al equipo CRM/GWS.
+- No mezclar asociaciones en esta tanda.
 
-## Anti-patrones
+## Criterios de avance entre tandas
 
-- hablar de mujeres como publico pasivo o carente;
-- presentar la IA como magia;
-- abrir con exceso de tecnicismo;
-- usar un tono de sensibilizacion vacia sin propuesta concreta;
-- sonar a formacion comercial estandar.
+Se puede avanzar a la siguiente tanda cuando:
 
-## CTA por fase del funnel
+- los drafts de la tanda anterior han sido revisados por humano;
+- no hay errores relevantes de personalizacion;
+- los bounces no indican un problema sistemico de calidad de datos;
+- las respuestas recibidas no obligan a ajustar posicionamiento o CTA;
+- el tono sigue alineado con conversacion institucional y no venta agresiva.
 
-- Primer contacto: conversacion estrategica.
-- Tras interes inicial: reunion de diagnostico.
-- Tras reunion: valorar piloto acotado.
-- Tras piloto o interes fuerte: propuesta solicitada.
+Se debe ajustar antes de continuar si:
 
-## Resumen del piloto recomendado
-
-- Tipo: conservador.
-- Tamano: 12 oportunidades.
-- Mix: 8 P0 minimo, hasta 4 P1, 0 Review.
-- Foco: cabildos y ayuntamientos con area clara y email usable.
-- Exito minimo para escalar:
-  - al menos 10 envios efectivos;
-  - `bounce rate <= 10%`;
-  - al menos 2 respuestas cualificadas o 2 reuniones propuestas.
-
-## Riesgos estrategicos
-
-- Que el mensaje parezca una oferta de curso y no una conversacion institucional.
-- Que el email llegue a buzones genericos sin capacidad de derivacion.
-- Que Igualdad vea el tema como sensibilizacion y no como politica medible.
-- Que Empleo o Desarrollo Local lo perciban demasiado social y poco operativo.
-- Que se fuerce una propuesta antes de validar interes real.
+- hay respuestas que perciben el mensaje como venta de curso;
+- aparecen errores de entidad, area, territorio o tratamiento;
+- los emails genericos no derivan o generan confusion;
+- el adjunto pesa demasiado o no se percibe como pieza de primer contacto;
+- el CTA se percibe demasiado frio, automatizado o comercial.

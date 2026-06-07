@@ -1,55 +1,58 @@
-# Phase 6 Open Questions — IA Mujeres
+# Phase 6.1 Open Questions — IA Mujeres Funnel
 
-- Date: 2026-06-07
-- Status: open items for Phase 7
+Este documento sustituye la lista inicial de `Unknowns` de Fase 6 tras feedback humano. La estrategia base existe, pero no se considera cerrada del todo hasta validar Email 1 v2, reglas de personalizacion y primera tanda operativa.
 
-## Unknowns
+## Decisiones resueltas por feedback humano
 
-- `Unknown` — bio real de Romina.
-- `Unknown` — notas reales de posicionamiento de Romina.
-- `Unknown` — borrador real del primer email.
-- `Unknown` — decision final sobre adjuntar dossier o solo enlazarlo.
-- `Unknown` — cuenta emisora definitiva para campana real.
-- `Unknown` — firma final del email.
-- `Unknown` — variantes exactas de copy por segmento.
-- `Unknown` — CTA final exacto de Fase 7.
-- `Unknown` — confirmacion final del lote piloto antes de ejecucion.
+- Voz del Email 1: Romina Ojeda Brito.
+- Cuenta emisora definitiva: `gerencia@skilland.ai`.
+- No usar `direccion@skilland.ai`, `sales@reboot.academy` ni varias cuentas para esta campana.
+- Firma valida para Email 1:
 
-## Decisiones ya cerradas en Fase 6
+```text
+Romina Ojeda Brito
+Presidenta | WISE Canarias (Women In STEAM Empowerment Canarias)
+Gerente | Instituto de Innovacion Tecnologica y Educativa para el Desarrollo
+CEO | Reboot Academy
+gerencia@skilland.ai | www.skilland.ai
++34 685 81 06 90
+```
 
-- El funnel abre conversaciones institucionales; no vende cursos en frio.
-- El primer canal es email.
-- El foco inicial real son cabildos y ayuntamientos.
-- El modelo comercial principal se nombra en espanol y se traduce al `outreachStatus` actual.
-- El piloto debe ser conservador.
-- `needs_manual_review=true` excluye del piloto.
-- No se usaran aperturas de email como KPI fiable.
+- En primer contacto se adjunta la presentacion corta: `Mujeres, IA y el futuro del Trabajo - Presentacion corta — SkilLand.pdf`.
+- No se adjunta el dossier largo en Email 1; queda como activo posterior para seguimiento, retargeting o contactos que respondan.
+- Para la primera tanda se usara una plantilla unificada para cabildos, ayuntamientos y registros actuales.
+- La personalizacion sera ligera mediante campos CRM: nombre, entidad, territorio, area, tipo de organizacion y posible linea de contexto.
+- No hay piloto estrategico restrictivo.
+- La ejecucion sera progresiva por tandas pequenas, con revision humana de drafts antes de enviar.
+- El objetivo operativo es cubrir el dataset actual de 100+ registros si la calidad lo permite.
+- Funnel Academy no implementa workflows, no toca CRM y no toca GWS.
+- Workflows, automatizaciones y validaciones tecnicas corresponden al repo/equipo CRM-GWS.
+- Business Line y Campaign no se reabren en esta iteracion.
+- Asociaciones quedan para segundo sprint; ahora se trabaja con cabildos, ayuntamientos y registros actuales del CRM.
 
-## Decisiones pendientes del usuario antes de Fase 7
+## Pendientes reales antes de Fase 7
 
-- Confirmar si el primer email firma como voz institucional de Romina, de SkilLand o de otra cuenta.
-- Confirmar si el dossier se envia en el primer contacto, solo si responden, o solo tras reunion.
-- Confirmar si el piloto debe ir mas cargado a Igualdad pura o abrir antes Empleo / Desarrollo Local.
-- Confirmar si `Conversacion iniciada` se mantiene como estado visible para el equipo o solo como nota interna.
-- Confirmar el tono exacto de la invitacion: mas institucional, mas ejecutiva o mas territorial.
+- `Unknown` — link de LinkedIn o bio oficial de Romina, solo si se quiere enriquecer la autoridad de la firma.
+- `Pending human review` — validacion final de Email 1 v2.
+- `Pending human review` — seleccion o revision de la primera tanda de envio.
+- `Pending CRM validation` — confirmacion de que los campos disponibles permiten aplicar las reglas de personalizacion sin inventar datos.
+- `Pending decision` — asunto final entre el recomendado y las alternativas propuestas.
+- `Pending decision` — criterio exacto para pausar, ajustar o continuar entre tandas.
 
-## Inputs necesarios para Fase 7
+## Decisiones de copy para Email 1 v2
 
-- Copia real del primer email actual.
-- Notas o bio verificable de Romina.
-- Cuenta emisora confirmada.
-- Decidir si el dossier entra como adjunto, enlace o pieza posterior.
-- Confirmar segmentos que recibiran variacion de copy:
-  - Cabildos Igualdad
-  - Ayuntamientos Igualdad
-  - Empleo / Desarrollo Local
-  - Politicas Sociales o mixtos
+- Mantener tono institucional, cercano y no paternalista.
+- No vender "curso de IA para mujeres".
+- Presentar SkilLand IA Mujeres como conversacion estrategica sobre empoderamiento femenino en IA, futuro del trabajo e impacto territorial.
+- Reforzar Reboot como proyecto nacido en Canarias para ayudar a personas y colectivos con barreras de acceso a oportunidades tecnologicas a reiniciar su trayectoria profesional.
+- Usar la cifra de mas de 1.000 estudiantes como prueba de impacto, no como vanity metric aislada.
+- Explicar la IA como riesgo de nueva exclusion laboral femenina o como oportunidad historica si se actua a tiempo.
+- Quitar enlace frio de calendario.
+- CTA recomendado: primera reunion adaptable a llamada, videollamada o encuentro presencial.
 
-## Riesgo si no se aportan
+## No bloqueos actuales
 
-Fase 7 puede avanzar con copy base institucional, pero sin estos inputs aumentan:
-
-- riesgo de desalineacion de tono;
-- riesgo de firma no definitiva;
-- riesgo de enviar demasiado pronto el dossier;
-- riesgo de sobregeneralizar entre segmentos.
+- La falta de bio publica de Romina no bloquea Email 1 v2.
+- La falta de dataset tabular de asociaciones no bloquea esta tanda.
+- La no implementacion de workflows desde Funnel Academy no bloquea el diseno comercial ni el copy.
+- El smoke test CRM/GWS puede seguir en paralelo; sus resultados se incorporaran cuando esten validados por el equipo tecnico.

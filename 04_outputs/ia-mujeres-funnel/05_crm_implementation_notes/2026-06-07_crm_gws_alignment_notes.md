@@ -1,131 +1,179 @@
-# CRM GWS Alignment Notes — IA Mujeres
+# CRM / GWS Alignment Notes — IA Mujeres Funnel
 
-- Date: 2026-06-07
-- Scope: alineacion entre estrategia de Fase 6 y operativa actual CRM + GWS
+## Nota de alcance Fase 6.1
+
+Funnel Academy disena el funnel comercial, el copy, las reglas de personalizacion y la logica de estados. No implementa workflows, no toca contactos reales, no envia emails y no modifica GWS.
+
+La implementacion tecnica de workflows, automatizaciones, smoke tests y validacion CRM-GWS queda fuera de este repo y corresponde al equipo/repositorio CRM-GWS.
+
+## Decisiones operativas integradas
+
+- Business Line CRM: `SkilLand IA Mujeres`.
+- Campaign/Funnel CRM: `IA Mujeres 2026`.
+- Cuenta emisora definitiva para esta campana: `gerencia@skilland.ai`.
+- No usar `direccion@skilland.ai` ni `sales@reboot.academy`.
+- Email 1 se envia con presentacion corta adjunta.
+- No adjuntar dossier largo en primer contacto.
+- Primera tanda con plantilla unificada y personalizacion ligera.
+- Envio progresivo por tandas pequenas con revision humana de drafts.
+- No hay restriccion estrategica por tamano fijo.
+- Objetivo operativo: cubrir el dataset actual de 100+ registros si la calidad lo permite.
 
 ## CRM / Twenty como fuente de verdad
 
-CRM debe conservar:
+Twenty debe conservar la verdad comercial y operativa sobre:
 
-- deal / opportunity;
-- `campaignName = IA Mujeres 2026`;
-- `businessLineName = SkilLand IA Mujeres`;
-- relacion nativa de Business Line;
-- prioridad comercial `P0`, `P1`, `P2`, `Review` en nota o campo operativo;
+- deals u oportunidades;
+- estado comercial del contacto;
+- Business Line;
+- Campaign;
+- prioridad P0/P1/P2/Review;
+- segmento ICP;
+- tipo de organizacion;
+- area/departamento;
+- territorio;
+- flags de calidad de datos;
+- revision manual;
+- tareas;
+- reuniones;
+- notas comerciales;
+- resultado de respuesta o no respuesta.
+
+## Campos CRM necesarios
+
+Campos ya asumidos o necesarios para operar esta campana:
+
+- `business_line`;
+- `campaign`;
+- `organization_type`;
 - `icp_segment`;
 - `department_area`;
+- `territory`;
+- `priority`;
 - `high_confidence`;
 - `needs_manual_review`;
 - `generic_email`;
 - `duplicate_possible`;
-- tareas;
-- reuniones;
-- notas de decision y contexto.
+- `contact_name`;
+- `contact_role`;
+- `email`;
+- `email_type` si existe o se puede derivar;
+- `personalization_line` si se aprueba;
+- `email_sender`;
+- `email_attachment`;
+- `last_email_sent_at`;
+- `last_message_id`;
+- `last_thread_id`;
+- `reply_received_at`;
+- `bounce_status` si esta disponible;
+- `meeting_status`;
+- `next_task`.
 
-## Campos CRM necesarios para operar esta fase
+## GWS CLI como fuente operativa
 
-### Ya disponibles o documentados
-
-- `campaignName`
-- `businessLineName`
-- `icp_segment`
-- `department_area`
-- `high_confidence`
-- `needs_manual_review`
-- `generic_email`
-- `duplicate_possible`
-- `outreachStatus`
-- `firstEmailSentAt`
-- `lastEmailSentAt`
-- `lastReplyAt`
-- `followUpDueAt`
-- `meetingStatus`
-- `meetingDate`
-
-### Necesarios a nivel operativo, aunque puedan vivir como notas o convencion
-
-- prioridad comercial `P0/P1/P2/Review`
-- motivo de cierre `No interesado` o `Nurturing`
-- criterio de lote piloto
-- resumen de reunion realizada
-
-## Eventos GWS necesarios
-
-Los eventos minimos utiles para esta campana son:
-
-- `draft_created`
-- `email_sent`
-- `reply_received`
-- `send_failed`
-- `bounce_detected`
-- `manual_review_required`
-
-## Que puede medir de forma fiable el sistema
+GWS CLI debe registrar o devolver, cuando la implementacion tecnica lo permita:
 
 - draft creado;
+- draft aprobado;
 - email enviado;
-- reply recibido;
-- bounce si Gmail lo expone o se detecta;
-- reunion propuesta;
-- reunion agendada;
-- estado comercial actualizado.
+- cuenta emisora usada;
+- destinatario;
+- asunto;
+- attachment usado;
+- `message_id`;
+- `thread_id`;
+- respuesta detectada;
+- bounce si esta disponible;
+- timestamps relevantes.
 
-## Que NO puede medir de forma fiable
+## Que se puede medir de forma fiable
 
-- apertura de email;
-- lectura real;
-- clics si no existe infraestructura externa;
-- interes cualificado sin intervencion humana.
+- Email preparado como draft.
+- Draft revisado por humano.
+- Email enviado.
+- Cuenta emisora usada.
+- Message ID y thread ID si GWS los expone.
+- Respuesta recibida.
+- Bounce si GWS o el workflow lo detecta.
+- Reunion propuesta.
+- Reunion agendada.
+- Reunion realizada.
+- Propuesta solicitada.
+- No interesado.
+- Sin respuesta tras ventana definida.
 
-## Rol humano obligatorio
+## Que no se debe usar como KPI principal
 
-El humano debe intervenir en:
+- Aperturas de email.
+- Clicks no instrumentados.
+- Inferencias de interes sin respuesta.
+- Metricas no disponibles en CRM/GWS.
+- Resultados de impacto antes de ejecutar un proyecto real.
 
-- validacion final de lotes P0 y P1;
-- aprobacion de drafts;
-- interpretacion del contexto politico o institucional;
-- lectura de replies;
-- paso de `Respuesta recibida` a `Conversacion iniciada`;
-- propuesta y cierre de agenda;
-- decision de nurturing o cierre.
+## Ownership operativo
+
+| elemento | fuente principal | responsable operativo | nota |
+|---|---|---|---|
+| Estado comercial | CRM | Humano / CRM | No depende de aperturas. |
+| Segmento y prioridad | CRM | Humano | Debe revisarse en P0/P1. |
+| Draft | GWS | Humano / GWS | Debe aprobarse antes de enviar. |
+| Envio | GWS | Operador autorizado | No desde Funnel Academy. |
+| Message ID / Thread ID | GWS | GWS / integracion | Debe sincronizarse si el workflow lo permite. |
+| Respuesta | GWS + CRM | Humano | La interpretacion comercial es humana. |
+| Bounce | GWS + CRM | GWS / humano | Si esta disponible. |
+| Reunion | CRM | Humano | Fuente comercial de verdad. |
+| Workflow real | Repo CRM-GWS | Equipo tecnico | Fuera de scope de Funnel Academy. |
+
+## Estados comerciales recomendados
+
+- Pendiente revision.
+- Pendiente primer email.
+- Primer email draft creado.
+- Primer email aprobado.
+- Primer email enviado.
+- Respuesta recibida.
+- Conversacion iniciada.
+- Reunion propuesta.
+- Reunion agendada.
+- Reunion realizada.
+- Propuesta solicitada.
+- No interesado.
+- Sin respuesta.
+- Revisión manual.
 
 ## Dependencias del smoke test 4.1
 
-Esta fase no queda bloqueada por el smoke test, pero hay piezas que dependen de su validacion:
+El smoke test 4.1 puede aportar confirmacion tecnica sobre:
 
-- validacion de que el cambio de `outreachStatus` activa tareas coherentes;
-- validacion de que la deteccion de reply puede registrarse sin tocar datos reales;
-- validacion de que el flujo draft > send > thread > reply no rompe aislamiento por campaign;
-- validacion de que las cuentas emisoras finales son correctas.
+- capacidad real de crear drafts;
+- capacidad real de enviar desde `gerencia@skilland.ai`;
+- captura de `message_id` y `thread_id`;
+- deteccion de respuestas;
+- deteccion de bounces;
+- sincronizacion con CRM;
+- limites operativos por cuenta o lote.
+
+Fase 6.1 no debe bloquearse por el smoke test. Sus resultados deben incorporarse cuando esten validados por el equipo CRM-GWS.
 
 ## Pendientes para workflows reales
 
-- Los workflows deben completarse y activarse manualmente en UI.
-- `Sin respuesta` no tiene automatizacion nativa cerrada en esta fase.
-- `Propuesta solicitada` y `Reunion realizada` hoy dependen de tarea y nota humana.
-- La asociacion `thread_id -> crm_deal_id` sigue pendiente de integracion real.
-- Falta confirmar el estado real de las cuentas `gerencia@skilland.ai` y `direccion@skilland.ai` porque la documentacion mezcla "pendiente" y "operativas".
+Pendiente fuera de este repo:
 
-## Regla de traduccion estrategia -> operativa
+- confirmar eventos GWS disponibles;
+- definir sincronizacion exacta CRM-GWS;
+- decidir si los drafts se crean desde CRM, GWS CLI o proceso intermedio;
+- implementar tareas automaticas, si aplica;
+- implementar deteccion de respuestas y bounces, si aplica;
+- validar permisos y seguridad;
+- activar workflows reales en el entorno tecnico correspondiente.
 
-La documentacion de Fase 6 usa el lenguaje comercial en espanol, pero la operativa real sigue este mapeo:
+## Regla de prudencia operativa
 
-- `Pendiente primer email` -> `pending_first_email`
-- `Primer email enviado` -> `first_email_sent`
-- `Seguimiento pendiente` -> `follow_up_pending`
-- `Respuesta recibida` -> `replied`
-- `Reunion propuesta` -> `meeting_to_schedule`
-- `Reunion agendada` -> `meeting_scheduled`
-- `No interesado` -> `lost`
-- `Nurturing / a futuro` -> `nurturing`
+La campana debe ejecutarse por tandas pequenas:
 
-## Nota sobre el piloto
+- 5-10 contactos o ritmo similar;
+- revision humana de cada draft;
+- pausa si aparecen errores de personalizacion, tono, adjunto o calidad de datos;
+- continuidad hacia el dataset completo si las senales son aceptables.
 
-El piloto debe operar con:
-
-- 12 oportunidades maximo;
-- 8 P0 minimo;
-- hasta 4 P1;
-- 0 Review;
-- revision humana previa obligatoria;
-- medida por envio, reply, bounce, reunion propuesta y reunion agendada.
+Esta regla es prudencia operativa, no un piloto estrategico restrictivo.

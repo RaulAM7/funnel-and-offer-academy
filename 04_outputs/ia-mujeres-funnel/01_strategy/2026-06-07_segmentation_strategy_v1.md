@@ -1,110 +1,148 @@
-# Segmentation Strategy v1 — IA Mujeres
+# Segmentation Strategy v1 — SkilLand IA Mujeres
 
-- Date: 2026-06-07
-- Scope: cabildos y ayuntamientos canarios con areas afines a igualdad, empleo, politicas sociales y desarrollo local
+## Nota de Fase 6.1
 
-## Logica de segmentacion
+La segmentacion sigue siendo necesaria para priorizar revision, personalizacion y seguimiento CRM, pero no se usaran variantes profundas de copy en esta primera tanda. El usuario ha decidido trabajar con una plantilla unificada y microvariaciones segun datos disponibles.
 
-La segmentacion inicial debe seguir dos ejes:
+## Principio operativo
 
-1. tipo de entidad y responsabilidad institucional;
-2. claridad del area y calidad operativa del contacto.
+Segmentar no significa crear cuatro campanas separadas. En esta iteracion significa:
 
-## Logica de priorizacion por registro
+- decidir orden de revision;
+- adaptar una linea de contexto;
+- evitar errores de tono o area;
+- asignar prioridad CRM;
+- decidir si un registro entra en envio, requiere revision o queda fuera temporalmente.
+
+## Segmentos accionables
+
+| segmento | prioridad base | dolor probable | angulo de conversacion | CTA recomendado | riesgos | implicacion CRM |
+|---|---:|---|---|---|---|---|
+| Cabildos — Igualdad | P0 | Necesidad de politicas insulares medibles y legitimidad publica en igualdad digital. | IA como reto de igualdad y oportunidad territorial para mujeres de la isla. | Primera reunion institucional para valorar encaje. | Que suene a formacion blanda o accion simbolica. | `organization_type=cabildo`, `department_area=igualdad`, prioridad alta, revision humana. |
+| Cabildos — Empleo | P0/P1 | Necesidad de activar empleabilidad cualificada y transicion laboral. | IA como palanca de empleo femenino, autonomia economica y nuevos roles. | Reunion para explorar encaje con empleo/desarrollo economico. | Que se perciba como discurso solo de igualdad y no de empleo. | `department_area=empleo`, prioridad segun calidad de contacto. |
+| Cabildos — Politicas Sociales | P1 | Intervencion con colectivos vulnerables y necesidad de impacto justificable. | Inclusion, autonomia digital y acceso real a oportunidades tecnologicas. | Reunion para entender colectivos y objetivos. | Mayor sensibilidad sobre poblacion destinataria y presupuesto. | Requiere notas de contexto y seguimiento humano. |
+| Ayuntamientos — Igualdad | P0/P1 | Necesidad de acciones locales visibles, utiles y justificables. | Igualdad digital local y futuro del trabajo para mujeres del municipio. | Reunion corta para valorar si tiene sentido para el municipio. | Buzon generico, poco tiempo del area, riesgo de parecer envio masivo. | Seguimiento por tandas, personalizacion con municipio/area. |
+| Ayuntamientos — Empleo / Desarrollo Local | P1 | Necesidad de empleabilidad, productividad y oportunidades para mujeres del municipio. | IA como herramienta de desarrollo local y acceso a nuevos perfiles. | Reunion para valorar encaje con programas locales. | Si el framing es demasiado de igualdad, puede perder traccion. | Personalizacion por area, territorio y tipo de contacto. |
+| Entidades publicas mixtas o ambiguas | P2 | Puede haber encaje, pero el area responsable no esta clara. | Derivacion a igualdad, empleo o desarrollo local. | Pedir derivacion o primera orientacion. | Baja precision, mayor riesgo de no respuesta. | Mantener en CRM con notas y `needs_manual_review` segun caso. |
+| Registros en revision manual | Review | Datos incompletos, duplicados, ambiguos o contacto no usable. | No se recomienda envio hasta limpiar. | No aplica todavia. | Error reputacional, envio a persona/area incorrecta. | `needs_manual_review=true`, tarea de limpieza antes de draft. |
+
+## Logica P0 / P1 / P2 / Review
 
 ### P0
 
-Registros con:
+Registros con alta confianza para primeras tandas:
 
-- `high_confidence = true`;
-- `needs_manual_review = false`;
-- `duplicate_possible = false` o riesgo bajo;
-- `organization_type` cabildo o ayuntamiento;
-- `icp_segment` claro;
-- `department_area` claro;
-- email usable, personal o de departamento.
+- `high_confidence=true`;
+- `needs_manual_review=false`;
+- cabildo o ayuntamiento;
+- area clara de Igualdad, Empleo, Mujer, Politicas Sociales o Desarrollo Local;
+- email usable;
+- sin duplicidad probable relevante;
+- territorio y entidad claros.
 
 ### P1
 
-Registros con buen encaje, pero con una friccion manejable:
+Registros usables con alguna limitacion ligera:
 
-- email generico de departamento;
-- mezcla de areas compatible con el mensaje;
-- posible revision ligera de tono o routing.
+- area clara, pero email generico de departamento;
+- entidad y territorio claros, pero sin persona nominal;
+- cabildo o ayuntamiento con buen encaje, aunque falte cargo exacto;
+- posible revision ligera antes de draft.
 
 ### P2
 
-Registros usables, pero menos directos:
+Registros que pueden entrar despues de aprender de las primeras tandas:
 
-- email institucional general;
-- area ambigua;
-- encaje posible pero no prioritario para el primer piloto.
+- entidad publica mixta o ambigua;
+- contacto institucional general;
+- area no totalmente clara, pero con posible relacion con igualdad, empleo o desarrollo local;
+- calidad suficiente para conservar, pero no para priorizar.
 
 ### Review
 
-Registros que no deben entrar en piloto:
+Registros que no deben enviarse sin limpieza:
 
-- `needs_manual_review = true`;
-- falta de email usable;
-- area poco clara;
-- duplicado no resuelto;
-- baja confianza o inconsistencias relevantes.
+- `needs_manual_review=true`;
+- `duplicate_possible=true` sin resolver;
+- email incompleto, dudoso o no usable;
+- entidad o territorio ambiguos;
+- area incompatible o desconocida;
+- riesgo de tratar a una persona o institucion de forma incorrecta.
 
-## Regla sobre `generic_email`
+## Uso de segmentacion en el copy
 
-Un `generic_email` no es automaticamente malo. Un correo de departamento de Igualdad, Empleo o Servicios Sociales puede ser mas util que un correo personal si el mensaje esta pensado para ser derivado institucionalmente.
+Para esta primera tanda se mantiene un unico Email 1 base. La segmentacion solo modifica:
 
-## Segmentos
+- saludo;
+- linea de personalizacion;
+- referencia a cabildo o ayuntamiento;
+- referencia a Igualdad, Empleo, Desarrollo Local o Politicas Sociales;
+- CTA secundario de derivacion cuando el buzon sea generico.
 
-| Segmento | Prioridad | Dolor probable | Angulo de conversacion | CTA recomendado | Riesgos | Implicacion CRM |
-|---|---|---|---|---|---|---|
-| Cabildos - Igualdad | P0 | Necesitan accion insular medible y con legitimidad publica. | Igualdad digital como politica publica insular con piloto escalable. | Diagnostico insular + piloto. | Que se perciba como formacion blanda. | Vista prioritaria, tareas rapidas, seguimiento cercano. |
-| Cabildos - Empleo | P0/P1 | Necesitan empleabilidad y adaptacion a IA con impacto territorial. | IA Mujeres como palanca de empleabilidad y reconversion. | Reunion de diagnostico de empleabilidad. | Que el enfoque parezca demasiado social y poco laboral. | Etiqueta de segmento y prioridad alta en opportunity. |
-| Cabildos - Politicas Sociales | P1 | Necesitan intervencion con colectivos vulnerables y justificacion de impacto. | Programa medible para inclusion y autonomia digital. | Conversacion sobre colectivo y piloto. | Mayor sensibilidad presupuestaria y de derivacion. | Requiere notas de contexto mas finas. |
-| Ayuntamientos - Igualdad | P0 | Necesitan acciones locales visibles, aterrizadas y justificables. | Igualdad digital local con piloto municipal. | Diagnostico territorial local. | Buzon generico, poco tiempo del equipo. | Mayor volumen; seguimiento por lotes. |
-| Ayuntamientos - Empleo / Desarrollo Local | P1 | Necesitan productividad, empleabilidad y apoyo a mujeres del municipio. | IA como herramienta de transicion laboral y desarrollo economico. | Reunion sobre piloto para empleo local. | Menor encaje si el framing suena solo a igualdad. | Separar bien copy por area en Fase 7. |
-| Entidades publicas mixtas o ambiguas | P2 | Tienen competencias cruzadas, pero encaje incierto. | Conversacion exploratoria con foco en encaje institucional. | Validar area responsable. | Derivacion lenta, ownership difuso. | Mantener baja prioridad hasta aclarar. |
-| Registros en revision manual | Review | Datos incompletos o ambiguos. | No salir a contacto hasta limpiar. | Ninguno. | Rebote, mal routing, mala primera impresion. | Cola de revision y tarea manual. |
+No se deben crear variantes profundas por segmento hasta validar respuesta humana y calidad real de datos.
 
-## Prioridad por segmento
+## Ejemplos de angulo por segmento
 
-### Prioridad 1
+### Cabildo — Igualdad
 
-- Cabildos - Igualdad
-- Ayuntamientos - Igualdad
+Enfoque: responsabilidad insular, igualdad digital, futuro del trabajo y posibilidad de accion territorial medible.
 
-Son el mejor encaje entre tesis del producto, legitimidad institucional y coherencia del primer mensaje.
+### Cabildo — Empleo
 
-### Prioridad 2
+Enfoque: transicion laboral, acceso a nuevos roles, autonomia economica y desarrollo de talento femenino.
 
-- Cabildos - Empleo
-- Cabildos - Politicas Sociales
-- Ayuntamientos - Empleo / Desarrollo Local
+### Ayuntamiento — Igualdad
 
-Requieren modular el angulo hacia empleabilidad, productividad publica o inclusion con impacto.
+Enfoque: accion local, mujeres del municipio y conversacion institucional sobre brecha de IA.
 
-### Prioridad 3
+### Ayuntamiento — Empleo / Desarrollo Local
 
-- Entidades publicas mixtas o ambiguas
+Enfoque: oportunidades reales para mujeres del municipio, nuevos perfiles y conexion formacion-empleo.
 
-No deben liderar el piloto. Sirven para ampliar casuisticas despues de validar mensaje.
+### Buzon institucional general
 
-## Implicacion CRM
+Enfoque: derivacion respetuosa al area responsable, sin fingir cercania ni asumir interlocutor.
 
-La estrategia debe reflejarse en CRM con:
+## Como deberia verse en CRM
 
-- `campaignName = IA Mujeres 2026`;
-- `businessLineName = SkilLand IA Mujeres`;
-- `icp_segment` como segmentador primario;
-- `department_area` como modulador del angulo;
-- `high_confidence`, `needs_manual_review`, `generic_email`, `duplicate_possible` como base operativa;
-- una etiqueta o nota de prioridad comercial `P0`, `P1`, `P2`, `Review`.
+Campos minimos para operar segmentacion y personalizacion:
 
-## Regla de entrada a piloto
+- `business_line`: `SkilLand IA Mujeres`;
+- `campaign`: `IA Mujeres 2026`;
+- `organization_type`;
+- `icp_segment`;
+- `department_area`;
+- `territory`;
+- `priority`: P0, P1, P2, Review;
+- `high_confidence`;
+- `needs_manual_review`;
+- `generic_email`;
+- `duplicate_possible`;
+- `personalization_line` si existe;
+- `email_sender`: `gerencia@skilland.ai`;
+- `email_attachment`: presentacion corta.
 
-Solo entran en el piloto:
+## Regla de entrada a tandas de envio
 
-- registros P0;
-- algunos P1 con area clara y routing plausible;
-- ningun Review;
-- ningun contacto sin email usable.
+Entran primero:
+
+- P0 revisados por humano;
+- P1 con email usable y personalizacion segura;
+- sin duplicidad probable sin resolver;
+- sin datos inventados;
+- con draft aprobado antes del envio.
+
+Quedan fuera temporalmente:
+
+- Review;
+- duplicados no resueltos;
+- emails no usables;
+- registros sin entidad o territorio claro;
+- registros que exijan copy especifico no validado.
+
+## Ritmo recomendado
+
+- Tandas pequenas de 5-10 contactos o ritmo similar.
+- Revision humana previa de drafts.
+- Aprendizaje entre tandas sobre respuestas, bounces y derivaciones.
+- Escalado hacia el dataset completo si no aparecen problemas de calidad o tono.
