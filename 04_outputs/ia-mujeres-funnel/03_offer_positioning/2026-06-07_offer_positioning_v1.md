@@ -115,3 +115,19 @@ Romina aparece en esta fase como voz institucional y empresarial prevista para i
 La entidad debe percibir:
 
 > esto no es una campana comercial de formacion generica, sino una oportunidad de explorar una respuesta concreta y medible a un reto institucional real.
+
+## Ajuste validado Fase 6.1 — percepcion del funnel
+
+El primer contacto debe percibirse como una invitacion a conversacion institucional, no como venta directa.
+
+La entidad debe entender que hay tres posibles caminos naturales:
+
+- si le interesa, se abre conversacion y se propone reunion;
+- si no responde, puede recibir follow-up suave o quedar en nurturing futuro;
+- si no procede, se cierra limpio o se corrige el contacto.
+
+## Posicionamiento ante no respuesta
+
+La falta de respuesta no debe interpretarse como rechazo. En administraciones publicas puede significar saturacion, derivacion interna, timing o buzon generico.
+
+Por eso, el posicionamiento debe permitir follow-ups respetuosos, territoriales e institucionales sin sonar insistente ni comercial.

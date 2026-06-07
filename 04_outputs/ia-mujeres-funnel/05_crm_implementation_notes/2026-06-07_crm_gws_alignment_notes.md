@@ -177,3 +177,37 @@ La campana debe ejecutarse por tandas pequenas:
 - continuidad hacia el dataset completo si las senales son aceptables.
 
 Esta regla es prudencia operativa, no un piloto estrategico restrictivo.
+
+## Ajuste validado Fase 6.1 — funnel por carriles
+
+La logica operativa queda organizada en tres carriles:
+
+- Carril principal: respuesta recibida, conversacion iniciada, reunion propuesta, reunion agendada, reunion realizada, propuesta solicitada.
+- Carril de retargeting: seguimiento pendiente, sin respuesta, follow-up 1, follow-up 2, nurturing a futuro.
+- Carril de cierre/bloqueo: no interesado, bounce/contacto invalido, no procede, revision manual.
+
+## Stages, statuses, eventos y tareas
+
+No todos los conceptos deben ser stages de CRM.
+
+- Stages comerciales: conversacion iniciada, reunion propuesta, reunion agendada, reunion realizada, propuesta solicitada, no interesado.
+- Outreach status: pendiente primer email, primer email enviado, seguimiento pendiente, sin respuesta, nurturing.
+- Eventos GWS: `draft_created`, `email_sent`, `email_opened`, `reply_received`, `bounce_detected`.
+- Tareas humanas: aprobar draft, responder interesado, proponer reunion, hacer follow-up, revisar contacto.
+
+## Aperturas
+
+`email_opened` solo debe guardarse como senal auxiliar si existe tracking fiable.
+
+No debe:
+
+- ser stage principal;
+- activar cierre;
+- contarse como conversion;
+- mencionarse en el copy de follow-up.
+
+## Firma Gmail/GWS
+
+No hardcodear firma en el cuerpo del Email 1 desde Funnel Academy.
+
+Pendiente tecnico externo: validar si el metodo real de GWS inserta la firma de Gmail al crear/enviar el draft desde `gerencia@skilland.ai`. Si no la inserta, el repo/equipo CRM-GWS debera decidir si inyecta una firma HTML controlada.

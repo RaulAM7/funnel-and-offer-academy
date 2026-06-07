@@ -2,10 +2,10 @@
 last_updated: "2026-06-07"
 project: "ia-mujeres-funnel"
 phase: "phase-6-strategy"
-status: "phase-6-first-pass-reviewed"
+status: "phase-6.1-user-feedback-integrated"
 business_line: "SkilLand IA Mujeres"
 campaign: "IA Mujeres 2026"
-current_step: "phase-6.1-copy-and-personalization-prep"
+current_step: "phase-6.1-email-and-funnel-map-review"
 next_phase: "phase-7-email-sequence"
 ---
 
@@ -25,9 +25,11 @@ Disenar el funnel estrategico y operativo para la campana/linea SkilLand IA Muje
 ## Estado actual
 
 - Fase 6 tiene una primera base documental creada: estrategia, segmentacion, funnel map y alineacion CRM/GWS.
-- Fase 6.1 en curso: integracion de feedback humano sobre voz, adjunto, CTA, alcance operativo y Email 1 v2.
-- Fase 7 pendiente: copy y secuencia de emails.
+- Fase 6.1 integra feedback humano sobre voz, adjunto, CTA, hipervinculos, firma, retargeting y funnel map definitivo.
+- Email 1 v2 queda preparado para revision humana, no para envio automatico.
+- El funnel map queda alineado con tres carriles: respuesta/reunion, no respuesta/retargeting y cierre/bloqueo.
+- Fase 7 pendiente: secuencia completa de emails y talking points de respuesta manual.
 
 ## Proximo paso
 
-Cerrar Fase 6.1 con Email 1 v2 validado por humano y reglas de personalizacion antes de lanzar Fase 7 completa.
+Validar Email 1 v2, firma real en GWS/Gmail y direccion final del funnel antes de lanzar Fase 7 completa.

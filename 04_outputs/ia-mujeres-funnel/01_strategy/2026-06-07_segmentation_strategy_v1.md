@@ -146,3 +146,22 @@ Quedan fuera temporalmente:
 - Revision humana previa de drafts.
 - Aprendizaje entre tandas sobre respuestas, bounces y derivaciones.
 - Escalado hacia el dataset completo si no aparecen problemas de calidad o tono.
+
+## Ajuste validado Fase 6.1 — uso por carriles
+
+La segmentacion no cambia la pelicula del funnel. Todos los segmentos aptos entran por Email 1 con objetivo de conversacion/reunion y luego se distribuyen por carriles segun eventos reales:
+
+- Responde: pasa a conversacion humana, independientemente del segmento.
+- No responde: pasa a seguimiento pendiente, follow-up y posible nurturing.
+- Rebota o contacto incorrecto: pasa a revision manual.
+- Dice no: se marca no interesado con motivo.
+
+## Implicacion para retargeting
+
+La prioridad P0/P1/P2 ayuda a decidir orden y nivel de revision, pero no debe cerrar contactos por silencio.
+
+- P0/P1 sin respuesta: follow-up con especial cuidado institucional.
+- P2 sin respuesta: puede pasar antes a nurturing si no hay senales fuertes.
+- Review: no entra en retargeting hasta resolver datos.
+
+`email_opened`, si existe, solo ajusta el tono del follow-up; no cambia el segmento ni convierte el contacto en interesado.

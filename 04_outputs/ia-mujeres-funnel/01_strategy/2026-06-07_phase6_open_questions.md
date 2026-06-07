@@ -7,7 +7,7 @@ Este documento sustituye la lista inicial de `Unknowns` de Fase 6 tras feedback 
 - Voz del Email 1: Romina Ojeda Brito.
 - Cuenta emisora definitiva: `gerencia@skilland.ai`.
 - No usar `direccion@skilland.ai`, `sales@reboot.academy` ni varias cuentas para esta campana.
-- Firma valida para Email 1:
+- Firma esperada en Gmail/GWS, no hardcodeada en el cuerpo del Email 1:
 
 ```text
 Romina Ojeda Brito
@@ -32,7 +32,8 @@ gerencia@skilland.ai | www.skilland.ai
 
 ## Pendientes reales antes de Fase 7
 
-- `Unknown` — link de LinkedIn o bio oficial de Romina, solo si se quiere enriquecer la autoridad de la firma.
+- `Resolved` — link de LinkedIn de Romina recuperado del PDF inicial.
+- `Unknown` — bio oficial ampliada de Romina, solo si se quiere enriquecer la autoridad de la firma.
 - `Pending human review` — validacion final de Email 1 v2.
 - `Pending human review` — seleccion o revision de la primera tanda de envio.
 - `Pending CRM validation` — confirmacion de que los campos disponibles permiten aplicar las reglas de personalizacion sin inventar datos.
@@ -56,3 +57,24 @@ gerencia@skilland.ai | www.skilland.ai
 - La falta de dataset tabular de asociaciones no bloquea esta tanda.
 - La no implementacion de workflows desde Funnel Academy no bloquea el diseno comercial ni el copy.
 - El smoke test CRM/GWS puede seguir en paralelo; sus resultados se incorporaran cuando esten validados por el equipo tecnico.
+
+## Actualizacion Fase 6.1 — enlaces y firma
+
+### Decisiones integradas
+
+- Los hipervinculos del PDF inicial se han recuperado e incorporado al Email 1 v2 donde encajan mejor.
+- No se reincorpora el link frio de calendario; el PDF inicial no conserva ningun hipervinculo real en la frase "aqui link".
+- No se hardcodea la firma en el cuerpo del email.
+
+### Pendiente tecnico real
+
+- `Unknown` — confirmar si GWS/Gmail anade automaticamente la firma de `gerencia@skilland.ai` al crear/enviar drafts reales.
+- Si la firma no aparece, decidir si el equipo CRM-GWS inyecta una firma HTML controlada fuera del cuerpo de copy.
+
+## Actualizacion Fase 6.1 — funnel validado
+
+- El funnel queda organizado por tres carriles: respuesta/reunion, no respuesta/retargeting y cierre/bloqueo.
+- `email_opened` queda como senal debil, no como stage.
+- `reply_received` queda como evento fuerte.
+- `meeting_booked` / reunion agendada queda como conversion primaria.
+- `Sin respuesta` queda como estado temporal para follow-up o nurturing, no como cierre automatico.

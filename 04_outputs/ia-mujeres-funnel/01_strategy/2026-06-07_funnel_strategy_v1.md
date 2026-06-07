@@ -144,3 +144,46 @@ Se debe ajustar antes de continuar si:
 - los emails genericos no derivan o generan confusion;
 - el adjunto pesa demasiado o no se percibe como pieza de primer contacto;
 - el CTA se percibe demasiado frio, automatizado o comercial.
+
+## Ajuste validado Fase 6.1 — funnel real
+
+La pelicula definitiva del funnel es:
+
+```text
+LISTADO
+→ Revision minima
+→ Primer email
+→ Espera X dias
+    ├── Responde → conversacion → reunion → propuesta / siguiente paso
+    ├── No responde → follow-up 1 → follow-up 2 → nurturing futuro
+    ├── Rebota/contacto incorrecto → revision manual
+    └── Dice no → no interesado
+```
+
+El primer email abre conversacion institucional. No vende directamente.
+
+## Carriles del funnel
+
+- Carril principal: contacto, respuesta, conversacion, reunion y propuesta solicitada.
+- Carril de retargeting: enviados sin respuesta, seguimiento pendiente, follow-up y nurturing futuro.
+- Carril de cierre/bloqueo: no interesado, bounce, contacto invalido, no procede o revision manual.
+
+## Aperturas como senal debil
+
+`email_opened` puede ser util si existe tracking fiable, pero no debe convertirse en estado comercial ni KPI principal.
+
+- `email_opened` = senal debil.
+- `reply_received` = evento fuerte.
+- `meeting_booked` = conversion real.
+
+Si no hay tracking fiable de apertura, el funnel sigue operando con `email_sent`, `reply_received`, `bounce_detected`, `meeting_proposed` y `meeting_booked`.
+
+## Conversiones
+
+- Conversion primaria: reunion agendada.
+- Conversion secundaria: respuesta positiva o conversacion iniciada.
+- Conversion posterior: propuesta solicitada.
+- No conversion temporal: sin respuesta.
+- Cierre negativo real: no interesado, bounce/contacto invalido o no procede.
+
+`Sin respuesta` no es cierre automatico; alimenta follow-up, retargeting o nurturing.

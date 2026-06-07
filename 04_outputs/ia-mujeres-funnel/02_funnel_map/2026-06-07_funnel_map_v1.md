@@ -1,63 +1,172 @@
 # Funnel Map v1 — IA Mujeres
 
 - Date: 2026-06-07
-- Model: funnel comercial en espanol con traduccion operativa al CRM actual
+- Model: funnel comercial institucional con carril principal, carril de retargeting y carril de cierre/bloqueo
+- Direction source: feedback humano validado en Fase 6.1
 
 ## Principio de diseno
 
-El funnel se disena para conversacion institucional, no para automatizacion agresiva. El lenguaje comercial del equipo puede ser mas claro en espanol que el `outreachStatus` actual, pero ambos deben convivir.
+El funnel se disena para conversacion institucional, no para automatizacion agresiva ni venta directa.
+
+El primer email tiene un objetivo unico:
+
+> conseguir conversacion o reunion.
+
+No busca vender un curso ni cerrar una propuesta en frio.
+
+## Funnel conceptual definitivo
+
+```text
+LISTADO
+→ Revision minima
+→ Primer email
+→ Espera X dias
+    ├── Responde
+    │   → Conversacion iniciada
+    │   → Reunion propuesta
+    │   → Reunion agendada
+    │   → Reunion realizada
+    │   → Propuesta solicitada / siguiente paso
+    │
+    ├── No responde
+    │   → Follow-up 1 / Retargeting
+    │   → Espera X dias
+    │   → Follow-up 2 / Retargeting
+    │   → Nurturing a futuro
+    │
+    ├── Rebota / contacto incorrecto
+    │   → Revision manual
+    │
+    └── Dice no
+        → No interesado
+```
 
 ## Mermaid
 
 ```mermaid
 flowchart LR
-    A[Revision manual] --> B[Pendiente primer email]
-    B --> C[Primer email enviado]
-    C --> D[Seguimiento pendiente]
-    D --> E[Respuesta recibida]
-    D --> F[Sin respuesta]
-    E --> G[Conversacion iniciada]
+    A[Listado explotable] --> B[Revision minima]
+    B --> C[Pendiente primer email]
+    C --> D[Primer email enviado]
+    D --> E[Espera X dias]
+
+    E -->|Responde| F[Respuesta recibida]
+    F --> G[Conversacion iniciada]
     G --> H[Reunion propuesta]
     H --> I[Reunion agendada]
     I --> J[Reunion realizada]
     J --> K[Propuesta solicitada]
-    E --> L[No interesado]
-    F --> M[Nurturing / a futuro]
-    K --> M
+
+    E -->|No responde| L[Seguimiento pendiente]
+    L --> M[Follow-up / Retargeting]
+    M --> N[Espera X dias]
+    N -->|Responde| F
+    N -->|Sigue sin respuesta| O[Nurturing a futuro]
+
+    E -->|Bounce/contacto incorrecto| P[Revision manual]
+    E -->|No interesado| Q[No interesado]
+
+    D -. senal debil .-> R[email_opened]
+    R -. no es stage .-> L
 ```
+
+`email_opened` no debe ser stage principal; solo senal auxiliar si el tracking existe y es fiable.
+
+## Interpretacion visual del canvas
+
+| Color | Interpretacion | Estados |
+|---|---|---|
+| Azul | Operacion | Revision minima, pendiente primer email, primer email enviado, seguimiento pendiente. |
+| Verde | Interes y avance | Respuesta recibida, conversacion iniciada, reunion propuesta, reunion agendada, reunion realizada, propuesta solicitada. |
+| Amarillo | Espera / falta de respuesta / retargeting | Espera X dias, sin respuesta, follow-up, retargeting. |
+| Rojo | Bloqueo o cierre | No interesado, bounce, contacto invalido, no procede, revision manual. |
+| Morado | Relacion futura | Nurturing a futuro, reimpactar en otra campana, contenido/evento futuro. |
+
+## Estados recomendados
+
+### Estados operativos
+
+| Estado | Que significa | Evento activador | Owner principal | Tarea generada | Criterio de salida |
+|---|---|---|---|---|---|
+| Pendiente revision | Registro aun no validado para contacto. | Importacion, flags de calidad o duda humana. | CRM + Humano | Revisar entidad, area, email, duplicados. | Apto para primer email o pasa a revision manual. |
+| Pendiente primer email | Registro apto y listo para draft. | Revision minima completada. | CRM + Humano | Crear draft. | Draft aprobado o vuelve a revision. |
+| Primer email enviado | Email 1 enviado desde cuenta autorizada. | `email_sent`. | GWS + CRM | Crear tarea de seguimiento. | Responde, rebota, dice no o entra en espera. |
+| Seguimiento pendiente | Hay que esperar o preparar siguiente impacto. | Email enviado sin respuesta inmediata. | CRM + Humano | Revisar ventana de seguimiento. | Respuesta, follow-up o nurturing. |
+| Sin respuesta | No hay respuesta tras la ventana definida. | Vence X dias sin reply. | CRM + Humano | Decidir follow-up o nurturing. | Follow-up, respuesta posterior o nurturing. |
+| Nurturing a futuro | No hay conversacion actual, pero no se quema el contacto. | Sin respuesta persistente o timing no adecuado. | CRM + Humano | Programar reimpacto futuro. | Reapertura en otra campana o archivo. |
+
+### Estados de avance / interes
+
+| Estado | Que significa | Evento activador | Owner principal | Tarea generada | Criterio de salida |
+|---|---|---|---|---|---|
+| Respuesta recibida | Llega reply util o relevante. | `reply_received`. | GWS + CRM + Humano | Leer, clasificar y contestar. | Conversacion, no interesado, derivacion o review. |
+| Conversacion iniciada | Hay intercambio con sustancia. | Humano confirma interes o contexto util. | Humano + CRM | Mantener conversacion. | Reunion propuesta o nurturing. |
+| Reunion propuesta | Se propone una reunion o formato equivalente. | Humano ofrece llamada, videollamada o encuentro. | Humano + CRM | Seguimiento de agenda. | Reunion agendada o pausa. |
+| Reunion agendada | Existe fecha o acuerdo operativo. | Confirmacion de agenda. | Humano + CRM | Preparar reunion. | Reunion realizada o reagendada. |
+| Reunion realizada | La conversacion sincronica ocurrio. | Registro humano post-reunion. | Humano + CRM | Nota y siguiente accion. | Propuesta solicitada, nurturing o cierre. |
+| Propuesta solicitada | La entidad pide propuesta o siguiente paso formal. | Solicitud explicita. | Humano + CRM | Preparar propuesta. | Propuesta enviada o pausa. |
+
+### Estados de cierre / bloqueo
+
+| Estado | Que significa | Evento activador | Owner principal | Tarea generada | Criterio de salida |
+|---|---|---|---|---|---|
+| No interesado | La entidad dice que no o no procede. | Reply negativo o decision humana. | Humano + CRM | Registrar motivo. | Cierre limpio. |
+| Bounce / contacto invalido | El email rebota o el contacto no sirve. | `bounce_detected` o revision humana. | GWS + CRM + Humano | Buscar contacto alternativo o marcar invalido. | Revision manual, correccion o archivo. |
+| Revision manual | Hay ambiguedad, duplicado o bloqueo de datos. | Flag de calidad, bounce, contacto incorrecto o duda. | Humano + CRM | Limpiar datos. | Vuelve a pendiente primer email o se descarta. |
+
+## Senales y eventos
+
+| Senal / evento | Tipo | Uso |
+|---|---|---|
+| `draft_created` | Operativo | Control de preparacion, no conversion. |
+| `email_sent` | Operativo | Activa espera y seguimiento. |
+| `email_opened` | Senal debil | Auxiliar para retargeting si existe y es fiable; no stage. |
+| `reply_received` | Evento fuerte | Saca del carril automatico y crea tarea humana. |
+| `bounce_detected` | Bloqueo | Pasa a revision manual o contacto invalido. |
+| `meeting_proposed` | Avance | Indica conversacion con siguiente paso. |
+| `meeting_booked` | Conversion real | Conversion primaria del primer tramo. |
+| `proposal_requested` | Conversion posterior | Interes cualificado post-reunion. |
+
+## Retargeting y no respuesta
+
+`Sin respuesta` no es cierre automatico. Es un estado temporal que alimenta:
+
+- follow-up 1;
+- follow-up 2;
+- nurturing a futuro.
+
+Reglas:
+
+- No respondio + no abierto: si hay tracking fiable, probar asunto o angulo distinto.
+- Abierto + no respondio: follow-up mas suave, sin mencionar la apertura.
+- Respondio: sale del carril automatico y pasa a humano.
+- Sin tracking fiable de apertura: operar solo con enviado, respuesta, bounce y reuniones.
 
 ## Traduccion al CRM actual
 
-| Estado comercial | `outreachStatus` actual | Notas |
+No todos los conceptos tienen que ser stages. Conviene separar:
+
+- stages comerciales;
+- `outreach_status`;
+- senales/eventos;
+- tareas humanas.
+
+| Concepto comercial | Tipo recomendado | Notas |
 |---|---|---|
-| Pendiente primer email | `pending_first_email` | Estado base de salida. |
-| Primer email enviado | `first_email_sent` | Primer envio confirmado. |
-| Seguimiento pendiente | `follow_up_pending` | Ventana de seguimiento abierta. |
-| Respuesta recibida | `replied` | Reply detectado o registrado. |
-| Reunion propuesta | `meeting_to_schedule` | Hay interes y se propone agenda. |
-| Reunion agendada | `meeting_scheduled` | Fecha o acuerdo de reunion. |
-| No interesado | `lost` | Cierre negativo. |
-| Nurturing / a futuro | `nurturing` | No encaja ahora, pero merece seguimiento futuro. |
-
-Los estados `Revision manual`, `Conversacion iniciada`, `Reunion realizada`, `Propuesta solicitada` y `Sin respuesta` hoy se representan con una combinacion de task, nota, `meetingStatus`, `meetingDate` y juicio humano.
-
-## Tabla de estados
-
-| Estado | Que significa | Evento activador | Owner principal | Tarea generada | Siguiente paso recomendado | Criterio de salida |
-|---|---|---|---|---|---|---|
-| Revision manual | Registro no apto aun para contacto. | `needs_manual_review=true` o inconsistencia relevante. | Humano + CRM | Revisar contacto, area, duplicados. | Limpiar o descartar. | Se resuelve o se archiva. |
-| Pendiente primer email | Opportunity valida y lista para primer contacto. | Deal importado y aprobado para lote. | CRM + Humano | Preparar draft o cola de salida. | Crear draft revisado. | Draft aprobado o registro vuelve a review. |
-| Primer email enviado | Primer correo ya salio. | `email_sent` registrado por GWS o actualizacion manual. | GWS + CRM | Crear tarea de seguimiento. | Esperar reply o preparar seguimiento. | Pasa a seguimiento pendiente. |
-| Seguimiento pendiente | Ya hubo primer envio y se abre ventana de espera. | Cambio a `follow_up_pending` o tarea creada. | CRM + Humano | Revisar plazo y decidir seguimiento. | Monitorizar respuesta. | Hay reply, se cierra como sin respuesta, o se pasa a nurturing. |
-| Respuesta recibida | Llego una respuesta util o relevante. | `reply_received` o registro manual. | GWS + CRM + Humano | Leer, clasificar y responder. | Determinar si hay conversacion real. | Se confirma interes, objecion o cierre. |
-| Conversacion iniciada | Ya no es solo un reply; hay intercambio con sustancia. | Humano marca que existe conversacion real. | Humano + CRM | Preparar respuesta o propuesta de reunion. | Llevar a reunion. | Hay propuesta de reunion o se enfria. |
-| Reunion propuesta | Se ha propuesto agenda concreta. | Humano responde con invitacion a reunion. | Humano + CRM | Follow-up de agenda. | Cerrar fecha. | Se agenda o se mueve a nurturing. |
-| Reunion agendada | Existe fecha acordada o confirmacion operativa. | Confirmacion de agenda. | CRM + Humano | Preparar reunion. | Celebrar reunion. | Reunion realizada o cancelada. |
-| Reunion realizada | La conversacion sincronica ya ocurrio. | Humano registra reunion celebrada. | Humano + CRM | Nota de reunion y siguiente accion. | Valorar propuesta o nurturing. | Se pide propuesta o se cierra siguiente paso. |
-| Propuesta solicitada | La entidad pide propuesta o siguiente documento formal. | Solicitud explicita tras reunion. | Humano + CRM | Preparar propuesta a medida. | Elaborar propuesta. | Propuesta enviada o oportunidad en pausa. |
-| Sin respuesta | No hubo respuesta tras la ventana definida. | Vence seguimiento sin respuesta cualificada. | CRM + Humano | Decidir cierre o nurturing. | No insistir agresivamente. | Se cierra o se mueve a nurturing. |
-| No interesado | La entidad indica que no sigue. | Reply negativo o cierre humano. | Humano + CRM | Registrar motivo. | Cerrar limpio. | Fin del flujo. |
-| Nurturing / a futuro | No hay accion inmediata, pero el contacto no se quema. | Sin timing, sin respuesta util o interes futuro. | CRM + Humano | Nota de proximo ciclo. | Reapertura futura. | Se reabre o se archiva. |
+| Pendiente revision | Stage o flag de calidad | Puede ser `needs_manual_review`. |
+| Pendiente primer email | Outreach status | Listo para draft. |
+| Primer email enviado | Outreach status/evento | Activado por `email_sent`. |
+| Seguimiento pendiente | Tarea/outreach status | Controla espera y follow-up. |
+| Sin respuesta | Estado operativo temporal | No cierre. |
+| Nurturing a futuro | Stage o lista futura | Relacion futura, no perdida. |
+| Respuesta recibida | Evento fuerte + tarea | Requiere humano. |
+| Conversacion iniciada | Stage comercial | Humano interpreta. |
+| Reunion propuesta | Stage/tarea | Humano propone. |
+| Reunion agendada | Conversion primaria | Meeting booked. |
+| Propuesta solicitada | Stage posterior | Tras reunion o interes cualificado. |
+| No interesado | Cierre negativo | Registrar motivo. |
+| Bounce / contacto invalido | Evento de bloqueo | Revision manual. |
+| email_opened | Senal auxiliar | No stage comercial. |
 
 ## Ownership por sistema
 
@@ -65,41 +174,56 @@ Los estados `Revision manual`, `Conversacion iniciada`, `Reunion realizada`, `Pr
 
 Fuente de verdad para:
 
-- deal y company asociados;
+- deals;
+- estado comercial;
+- Business Line;
+- Campaign;
 - prioridad;
-- `campaignName`;
-- `businessLineName`;
-- estado comercial operativo;
+- segmento;
+- revision manual;
 - tareas;
+- reuniones;
 - notas;
-- reuniones.
+- nurturing futuro.
 
 ### GWS CLI
 
 Fuente operativa para:
 
-- draft creado;
-- email enviado;
+- drafts;
+- envios;
 - `message_id`;
 - `thread_id`;
-- reply recibido;
-- bounce si es detectable.
+- respuestas;
+- bounces si estan disponibles;
+- aperturas solo si existe tracking fiable.
 
 ### Humano
 
-Obligatorio para:
+Responsable de:
 
-- sacar un registro de review;
-- aprobar el draft;
-- interpretar replies;
-- decidir si hay conversacion real;
-- proponer o agendar reunion;
-- cerrar como no interesado o nurturing.
+- validar listas;
+- aprobar drafts;
+- responder a interesados;
+- proponer reunion;
+- mantener conversacion;
+- decidir cuando pasar a propuesta;
+- ajustar tono;
+- interpretar senales institucionales.
+
+## Conversiones
+
+- Conversion primaria: `Reunion agendada` / `meeting_booked`.
+- Conversion secundaria: respuesta positiva o conversacion iniciada.
+- Conversion posterior: propuesta solicitada.
+- No conversion temporal: sin respuesta.
+- Cierre negativo real: no interesado, bounce/contacto invalido, no procede.
 
 ## Reglas de avance
 
 - Ningun registro con `needs_manual_review=true` sale a primer email.
-- Un `generic_email` de area si puede avanzar si el area es correcta.
-- `reply_received` no equivale automaticamente a oportunidad cualificada.
-- `Sin respuesta` no debe detonar seguimiento agresivo en esta fase.
-- `Propuesta solicitada` solo aparece tras conversacion real, no por intuicion comercial.
+- Un email generico de area puede avanzar si el area es correcta y el copy pide derivacion con respeto.
+- `email_opened` no equivale a interes.
+- `reply_received` no equivale automaticamente a oportunidad cualificada, pero si exige intervencion humana.
+- `Sin respuesta` no debe cerrar la oportunidad de forma automatica.
+- `Propuesta solicitada` solo aparece tras conversacion real o interes explicito.
