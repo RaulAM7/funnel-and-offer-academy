@@ -1,14 +1,14 @@
 ---
-last_updated: "2026-03-22"
+last_updated: "2026-04-06"
 active_domain: funnels
 active_author: russell-brunson
 active_book: dotcom-secrets
 active_phase: block-work
 active_block: block-01
-blocks_completed: 1
+blocks_completed: 0
 blocks_total: 5
 book_status: in-progress
-session_count: 2
+session_count: 3
 blueprint_catalog_entries: 0
 ---
 
@@ -20,13 +20,14 @@ blueprint_catalog_entries: 0
 - Libro: DotCom Secrets
 - Fase: trabajo por bloques
 - Capa visual: habilitada (MCP-first con fallback local a `.excalidraw`)
-- Ultimo bloque completado: bloque-01 (Ladders and Funnels)
-- Siguiente paso recomendado: revisar canvas draft de bloque-01 con el usuario, luego empezar bloque-02 (Communication Funnel)
+- Ultimo bloque completado: ninguno
+- Bloque-01 en progreso: solo Secret-01 trabajado (Secret Formula)
+- Siguiente paso recomendado: continuar bloque-01 con Secret-02
 
 ## Progreso -- DotCom Secrets
 | Bloque | Estado | Visual | Fecha | Notas |
 |--------|--------|--------|-------|-------|
-| 01: Ladders and Funnels (Secrets 1-5) | completado | draft | 2026-03-21 | 5 insights, 5 principios, 4 playbooks, 5 ejemplos, 3 patrones, 3 candidatos elevacion, canvas draft generado |
+| 01: Ladders and Funnels (Secrets 1-5) | en-progreso (1/5 secrets) | draft parcial | 2026-03-21 | Solo Secret-01 (Secret Formula) procesado en detalle. Secrets 2-5 pendientes. Resumen y extraccion de bloque generados pero prematuros. |
 | 02: Communication Funnel (Secrets 6-8) | no-iniciado | no | -- | -- |
 | 03: Funnelology (Secrets 9-13) | no-iniciado | no | -- | -- |
 | 04: Frontend Funnels (Funnels 1-3) | no-iniciado | no | -- | -- |
