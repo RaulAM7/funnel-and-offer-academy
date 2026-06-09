@@ -120,7 +120,7 @@ Campos minimos para operar segmentacion y personalizacion:
 - `duplicate_possible`;
 - `personalization_line` si existe;
 - `email_sender`: `gerencia@skilland.ai`;
-- `email_attachment`: presentacion corta.
+- `email_attachment`: dosier breve azul v2.
 
 ## Regla de entrada a tandas de envio
 

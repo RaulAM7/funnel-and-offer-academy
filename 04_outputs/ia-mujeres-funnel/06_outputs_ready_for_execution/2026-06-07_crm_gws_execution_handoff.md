@@ -2,16 +2,16 @@
 
 ## Estado del handoff
 
-Funnel Academy deja cerrado el sprint estrategico/copy minimo de IA Mujeres.
+Funnel Academy deja cerrado el sprint estrategico/copy minimo de IA Mujeres con Email 1 v3 como version vigente.
 
-El siguiente paso vive en CRM/GWS, previsiblemente en el repo `skilland-crm`.
+El siguiente paso vive en CRM/GWS, previsiblemente en el repo `skilland-crm`. Una vez aprobada esta actualizacion en Funnel Academy, el cambio debe replicarse alli.
 
 No implementar desde este repo.
 
 ## Alcance entregado por Funnel Academy
 
 - Funnel validado: conversacion institucional first.
-- Email 1 final aprobado como base.
+- Email 1 v3 final aprobado como base.
 - Follow-up 1.
 - Follow-up 2 con white paper.
 - Nota de retargeting de contenido.
@@ -38,11 +38,17 @@ No hardcodear firma en el cuerpo salvo que CRM/GWS confirme que Gmail no la inse
 Una preocupación que quería compartir con usted
 ```
 
+Template vigente:
+
+```text
+04_email_sequence/2026-06-09_email_01_v3.md
+```
+
 ## Adjuntos por etapa
 
 | Etapa | Adjunto |
 |---|---|
-| Email 1 | `Mujeres, IA y el futuro del Trabajo - Presentacion corta — SkilLand.pdf` |
+| Email 1 | `Mujeres, IA y el Futuro del Trabajo · Dossier — SkilLand v2.pdf` |
 | Follow-up 1 | Sin dossier largo. |
 | Follow-up 2 | Dossier largo / white paper. |
 | Retargeting futuro | Dossier largo / white paper u otro contenido validado. |
@@ -53,13 +59,13 @@ Archivo de white paper sugerido:
 Mujeres, IA y el Futuro del Trabajo - Informe largo white paper para impactos posteriores o retargeting a quien no responda — SkilLand.pdf
 ```
 
-CRM/GWS debe validar nombres exactos de archivo antes de crear drafts.
+El dosier breve azul v2 figura en el workspace de Funnel Academy, pero CRM/GWS debe validar disponibilidad operativa y nombres exactos de archivo antes de crear drafts.
 
 ## Secuencia
 
 | Paso | Timing | Accion |
 |---|---|---|
-| Email 1 | Inicio | Enviar presentacion corta y abrir conversacion. |
+| Email 1 | Inicio | Enviar dosier breve azul v2 y abrir conversacion. |
 | Follow-up 1 | 10 dias despues de Email 1 | Retomar sin presion y facilitar derivacion. |
 | Follow-up 2 | 10 dias despues de Follow-up 1 | Compartir white paper como ultimo intento suave. |
 | Nurturing | Posterior | Mantener contacto para retargeting futuro. |
@@ -86,16 +92,22 @@ Pausar antes de la siguiente tanda si aparece:
 - senales de mala entregabilidad;
 - confusion por destinatario, area o entidad.
 
-## Campos necesarios
+## Variables minimas Email 1 v3
 
 - `[nombre]`
 - `[entidad]`
 - `[territorio]`
-- `[area]`
-- `[tipo_organizacion]`
-- `[personalizacion_1]`
+- `[derivacion_si_corresponde]`
 
-`[personalizacion_1]` es recomendable guardarlo en CRM/deal si el equipo lo ve facil, pero no debe bloquear la ejecucion. Si falta, usar linea institucional generica.
+`[derivacion_si_corresponde]` solo se usa cuando el buzon sea generico o exista duda de interlocutor. Si no aplica, queda vacio.
+
+Texto recomendado:
+
+```text
+Si no es la persona adecuada, agradecería que pudiera derivarlo al área responsable de igualdad, empleo, mujer, políticas sociales o desarrollo local.
+```
+
+CRM puede conservar reglas amplias de segmentacion y personalizacion para revision, priorizacion y follow-ups, pero Email 1 v3 no depende de `[area]`, `[tipo_organizacion]` ni `[personalizacion_1]` en el cuerpo base.
 
 ## Eventos conceptuales a registrar
 
@@ -124,9 +136,24 @@ Dashboard y centro de mando quedan para CRM/GWS, no para Funnel Academy.
 - Posible jornada divulgativa y de escucha en territorio.
 - Entregable asociado especializado en el contexto y con informacion recogida en terreno.
 - Diseno de proyecto a medida.
-- Objetivos, financiacion y KPIs de impacto.
+- Objetivos concretos y KPIs de impacto.
 
 No sonar a "charla gratis" ni a venta agresiva. Posicionar como colaboracion institucional y proceso de co-diseno.
+
+## Pendiente posterior en CRM
+
+Una vez aprobada esta actualización en Funnel Academy, el repo `Skilland-ai/skilland-crm` deberá sincronizar:
+
+- template vigente de Email 1 v3;
+- asunto;
+- variables mínimas;
+- adjunto Email 1: dosier breve azul v2;
+- reglas de derivación para buzones genéricos;
+- eliminación del LinkedIn de Romina;
+- eliminación de referencias económicas o presupuestarias en Email 1;
+- validación de firma Gmail/GWS.
+
+No implementar nada de CRM desde este repo.
 
 ## Cosas que NO debe hacer Funnel Academy
 
@@ -157,6 +184,6 @@ Respuestas positivas, derivaciones y peticiones de informacion se gestionan manu
 ## Validaciones externas pendientes
 
 - Firma automatica Gmail/GWS.
-- Adjuntos reales y nombre exacto de archivo.
+- Adjuntos reales, disponibilidad operativa y nombre exacto de archivo.
 - Seleccion de tanda inicial.
 - Revision humana de drafts.

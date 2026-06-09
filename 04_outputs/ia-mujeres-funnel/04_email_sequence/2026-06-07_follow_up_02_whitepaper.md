@@ -30,11 +30,11 @@ Estimado/a [nombre],
 
 Le escribo una ultima vez en relacion con el correo que le envie sobre mujeres, inteligencia artificial y futuro del trabajo.
 
-Como quizas no sea el momento adecuado para una reunion, he preferido compartirle un material mas amplio: un white paper / documento estrategico de trabajo en el que recogemos el contexto, el diagnostico y una posible forma de abordar este reto con entidades publicas y territoriales.
+Como quizas no sea el momento adecuado para una reunion, he preferido compartirle un material mas amplio: un white paper en el que recogemos el contexto, el diagnostico y una posible forma de abordar este reto con entidades publicas y territoriales.
 
 No lo planteamos como un catalogo comercial cerrado. Lo vemos mas bien como un material de reflexion para abrir conversaciones utiles sobre igualdad digital, empleabilidad, autonomia economica y nuevos roles profesionales vinculados a la IA.
 
-En los casos en los que tenga sentido, el proceso podria empezar con una reunion inicial y, despues, con una posible jornada de divulgacion y escucha en territorio para recoger necesidades, contrastar el enfoque y generar un entregable adaptado al contexto de la entidad. A partir de ahi, si encaja, se podria disenar un proyecto a medida con objetivos, financiacion y KPIs de impacto.
+En los casos en los que tenga sentido, el proceso podria empezar con una reunion inicial y, despues, con una posible jornada de divulgacion y escucha en territorio para recoger necesidades, contrastar el enfoque y generar un entregable adaptado al contexto de la entidad. A partir de ahi, si encaja, se podria disenar un proyecto a medida con objetivos concretos y KPIs de impacto.
 
 Si cree que esta conversacion puede ser relevante para [entidad], me encantaria poder comentarlo brevemente. Y si no es la persona adecuada, agradeceria que pudiera indicarme con quien tendria sentido hablarlo.
 

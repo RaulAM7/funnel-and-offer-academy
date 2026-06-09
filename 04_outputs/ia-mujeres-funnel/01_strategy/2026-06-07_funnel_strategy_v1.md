@@ -35,7 +35,7 @@ La clave no es pedir una compra. La clave es pedir una conversacion razonable so
 SkilLand IA Mujeres ofrece una forma de convertir la preocupacion por la brecha de IA en una actuacion territorial medible:
 
 - diagnostico inicial y conversacion con la entidad;
-- accion de divulgacion o sensibilizacion en territorio si encaja;
+- accion inicial de divulgacion gratuita en territorio si encaja;
 - diseno de proyecto a medida con objetivos, itinerarios y KPIs de impacto;
 - plataforma, acompanamiento y microcredenciales;
 - enfoque de empoderamiento femenino, no de formacion generica.
@@ -102,7 +102,7 @@ Ejemplo:
 
 ## Adjunto de Email 1
 
-- Adjuntar la presentacion corta: `Mujeres, IA y el futuro del Trabajo - Presentacion corta — SkilLand.pdf`.
+- Adjuntar el dosier breve azul v2: `Mujeres, IA y el Futuro del Trabajo · Dossier — SkilLand v2.pdf`.
 - No adjuntar el dossier largo en el primer contacto.
 - Usar el dossier largo solo como activo posterior para contactos que respondan, seguimiento o profundizacion.
 

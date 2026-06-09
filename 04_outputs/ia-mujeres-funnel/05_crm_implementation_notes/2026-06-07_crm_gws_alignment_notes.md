@@ -12,7 +12,7 @@ La implementacion tecnica de workflows, automatizaciones, smoke tests y validaci
 - Campaign/Funnel CRM: `IA Mujeres 2026`.
 - Cuenta emisora definitiva para esta campana: `gerencia@skilland.ai`.
 - No usar `direccion@skilland.ai` ni `sales@reboot.academy`.
-- Email 1 se envia con presentacion corta adjunta.
+- Email 1 se envia con el dosier breve azul v2 adjunto.
 - No adjuntar dossier largo en primer contacto.
 - Primera tanda con plantilla unificada y personalizacion ligera.
 - Envio progresivo por tandas pequenas con revision humana de drafts.

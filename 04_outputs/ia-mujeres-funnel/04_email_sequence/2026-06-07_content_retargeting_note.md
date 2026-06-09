@@ -37,7 +37,7 @@ No usar el dossier largo:
 Presentarlo como:
 
 - white paper;
-- documento estrategico de trabajo;
+- material amplio de trabajo;
 - informe amplio;
 - material de reflexion.
 
