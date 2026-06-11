@@ -33,11 +33,13 @@ No bloquear ejecucion por no tener este campo. Si no existe, generar una linea i
 
 | Caso | Saludo recomendado |
 |---|---|
-| Contacto con nombre nominal fiable | `Estimado/a [nombre],` |
-| Email generico de area | `Estimado equipo de [area],` |
-| Email institucional general | `A la atencion del area responsable de igualdad, empleo o desarrollo local,` |
-| Sin nombre pero area clara | `Estimado/a responsable de [area],` |
-| Datos ambiguos | No enviar; pasar a revision manual. |
+| Nombre femenino reconocido | `Estimada [nombre],` |
+| Nombre masculino reconocido | `Estimado [nombre],` |
+| Nombre no reconocido | `Estimado [nombre],` |
+| Sin nombre usable | `Estimado equipo,` |
+| Datos ambiguos de territorio o entidad | No enviar; pasar a revision manual. |
+
+Usar solo nombre de pila. No usar nombre completo ni `Estimado/a` en Email 1 v4.1.
 
 ## Reglas por tipo de contacto
 

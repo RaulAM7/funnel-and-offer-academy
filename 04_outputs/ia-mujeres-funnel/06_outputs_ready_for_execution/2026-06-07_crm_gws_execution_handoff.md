@@ -2,16 +2,16 @@
 
 ## Estado del handoff
 
-Funnel Academy deja cerrado el sprint estrategico/copy minimo de IA Mujeres con Email 1 v3 como version vigente.
+Funnel Academy deja cerrado el sprint estrategico/copy minimo de IA Mujeres con Email 1 v4.1 como version vigente.
 
-El siguiente paso vive en CRM/GWS, previsiblemente en el repo `skilland-crm`. Una vez aprobada esta actualizacion en Funnel Academy, el cambio debe replicarse alli.
+El siguiente paso vive en CRM/GWS, previsiblemente en el repo `skilland-crm`. La version v4.1 ya fue sincronizada alli para las siguientes tandas.
 
 No implementar desde este repo.
 
 ## Alcance entregado por Funnel Academy
 
 - Funnel validado: conversacion institucional first.
-- Email 1 v3 final aprobado como base.
+- Email 1 v4.1 final aprobado como base.
 - Follow-up 1.
 - Follow-up 2 con white paper.
 - Nota de retargeting de contenido.
@@ -28,9 +28,9 @@ gerencia@skilland.ai
 
 Voz: Romina Ojeda Brito.
 
-Firma esperada: firma Gmail/GWS de `gerencia@skilland.ai`.
+Firma minima incluida en el cuerpo: `Romina Ojeda Brito`.
 
-No hardcodear firma en el cuerpo salvo que CRM/GWS confirme que Gmail no la inserta automaticamente.
+No depender de firma automatica Gmail/GWS para que el email quede firmado.
 
 ## Asunto final Email 1
 
@@ -41,7 +41,7 @@ Una preocupación que quería compartir con usted
 Template vigente:
 
 ```text
-04_email_sequence/2026-06-09_email_01_v3.md
+04_email_sequence/2026-06-11_email_01_v4_1.md
 ```
 
 ## Adjuntos por etapa
@@ -92,22 +92,32 @@ Pausar antes de la siguiente tanda si aparece:
 - senales de mala entregabilidad;
 - confusion por destinatario, area o entidad.
 
-## Variables minimas Email 1 v3
+## Variables minimas Email 1 v4.1
 
-- `[nombre]`
-- `[entidad]`
-- `[territorio]`
-- `[derivacion_si_corresponde]`
+- `{{saludo_nombre}}`
+- `{{territorio}}`
+- `{{derivacion_si_corresponde}}`
 
-`[derivacion_si_corresponde]` solo se usa cuando el buzon sea generico o exista duda de interlocutor. Si no aplica, queda vacio.
+`{{saludo_nombre}}` se calcula desde nombre de pila:
+
+- femenino reconocido: `Estimada {nombre}`;
+- masculino reconocido: `Estimado {nombre}`;
+- nombre no reconocido: `Estimado {nombre}`;
+- sin nombre usable: `Estimado equipo`.
+
+No usar `Estimado/a` ni nombre completo en el saludo.
+
+`{{territorio}}` debe ser municipio para ayuntamientos e isla para cabildos.
+
+`{{derivacion_si_corresponde}}` solo se usa cuando el buzon sea generico o exista duda de interlocutor. Si no aplica, queda vacio.
 
 Texto recomendado:
 
 ```text
-Si no es la persona adecuada, agradecería que pudiera derivarlo al área responsable de igualdad, empleo, mujer, políticas sociales o desarrollo local.
+Si cree que esta conversación corresponde a otra persona del equipo, le agradecería mucho que pudiera reenviárselo o indicarme con quién hablar.
 ```
 
-CRM puede conservar reglas amplias de segmentacion y personalizacion para revision, priorizacion y follow-ups, pero Email 1 v3 no depende de `[area]`, `[tipo_organizacion]` ni `[personalizacion_1]` en el cuerpo base.
+CRM puede conservar reglas amplias de segmentacion y personalizacion para revision, priorizacion y follow-ups, pero Email 1 v4.1 no depende de `[area]`, `[tipo_organizacion]` ni `[personalizacion_1]` en el cuerpo base.
 
 ## Eventos conceptuales a registrar
 
@@ -140,18 +150,18 @@ Dashboard y centro de mando quedan para CRM/GWS, no para Funnel Academy.
 
 No sonar a "charla gratis" ni a venta agresiva. Posicionar como colaboracion institucional y proceso de co-diseno.
 
-## Pendiente posterior en CRM
+## Sincronizacion CRM
 
-Una vez aprobada esta actualización en Funnel Academy, el repo `Skilland-ai/skilland-crm` deberá sincronizar:
+El repo `Skilland-ai/skilland-crm` queda sincronizado con:
 
-- template vigente de Email 1 v3;
+- template vigente de Email 1 v4.1;
 - asunto;
 - variables mínimas;
 - adjunto Email 1: dosier breve azul v2;
 - reglas de derivación para buzones genéricos;
 - eliminación del LinkedIn de Romina;
 - eliminación de referencias económicas o presupuestarias en Email 1;
-- validación de firma Gmail/GWS.
+- validación de firma explicita en cuerpo.
 
 No implementar nada de CRM desde este repo.
 
@@ -168,7 +178,7 @@ No implementar nada de CRM desde este repo.
 
 - Seleccionar tanda.
 - Crear drafts.
-- Validar firma.
+- Validar firma explicita en cuerpo.
 - Validar adjuntos.
 - Revisar personalizacion.
 - Enviar.
@@ -183,7 +193,7 @@ Respuestas positivas, derivaciones y peticiones de informacion se gestionan manu
 
 ## Validaciones externas pendientes
 
-- Firma automatica Gmail/GWS.
+- Firma explicita en cuerpo.
 - Adjuntos reales, disponibilidad operativa y nombre exacto de archivo.
 - Seleccion de tanda inicial.
 - Revision humana de drafts.

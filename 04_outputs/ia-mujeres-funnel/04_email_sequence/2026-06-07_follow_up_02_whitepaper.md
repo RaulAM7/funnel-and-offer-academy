@@ -26,7 +26,7 @@ Validar nombre exacto del archivo en CRM/GWS antes de crear drafts.
 
 ## Email
 
-Estimado/a [nombre],
+{{saludo_nombre}},
 
 Le escribo una ultima vez en relacion con el correo que le envie sobre mujeres, inteligencia artificial y futuro del trabajo.
 
@@ -42,18 +42,22 @@ Si ahora no encaja, no hay problema. Lo dejo simplemente como material de refere
 
 Un saludo,
 
+Romina Ojeda Brito
+
 ## Firma
 
-No hardcodear firma en el cuerpo si Gmail/GWS la inserta automaticamente.
+Firma minima incluida en el cuerpo: `Romina Ojeda Brito`.
 
 ## Variables
 
-- `[nombre]`
+- `{{saludo_nombre}}`
 - `[entidad]`
 - `[territorio]`
 - `[area]`
 - `[tipo_organizacion]`
 - `[personalizacion_1]`
+
+`{{saludo_nombre}}` usa el mismo criterio que Email 1 v4.1: `Estimada {nombre}`, `Estimado {nombre}` o `Estimado equipo`.
 
 ## Notas de tono
 

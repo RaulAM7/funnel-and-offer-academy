@@ -1,6 +1,6 @@
-# Email 01 v3 — Version vigente para revision humana
+# Email 01 v4.1 — Version vigente para revision humana
 
-> Sustituye el copy v2 anterior. La version fuente vigente es `04_email_sequence/2026-06-09_email_01_v3.md`.
+> Sustituye el copy v3 anterior. La version fuente vigente es `04_email_sequence/2026-06-11_email_01_v4_1.md`.
 
 ## Asunto final aprobado
 
@@ -12,45 +12,42 @@ Mujeres, IA y el Futuro del Trabajo · Dossier — SkilLand v2.pdf
 
 ## Email
 
-Estimado/a [nombre],
+{{saludo_nombre}},
 
-Me llamo Romina Ojeda Brito. Durante los últimos años he liderado Reboot Academy, un proyecto que nació en Canarias con una idea muy concreta: ayudar a personas que necesitaban reiniciar su trayectoria profesional, muchas de ellas en situaciones de desempleo, vulnerabilidad o falta de acceso a oportunidades tecnológicas, a formarse en habilidades realmente demandadas por el mercado.
+Soy Romina Ojeda Brito. Le escribo porque estamos abriendo conversaciones con instituciones canarias sobre un reto muy concreto: que la IA no amplíe aún más la brecha laboral y de oportunidades de muchas mujeres.
 
-Desde ahí hemos formado a más de 1.000 estudiantes, y esa experiencia nos llevó a impulsar el Instituto de Innovación Tecnológica y Educativa para el Desarrollo: una evolución natural para seguir conectando formación, tecnología, metodología e impacto real en el territorio.
+Fundé Reboot Academy en 2019 para traer a Canarias el modelo bootcamp tecnológico, con el que hemos ayudado a más de 1.000 personas a reorientar su carrera hacia perfiles digitales. Además, presido WISE Canarias, Women in STEAM Empowerment Canarias, desde donde trabajamos para acercar ciencia, tecnología e innovación a más mujeres.
 
-También presido Women In STEAM Empowerment Canarias, y desde esa responsabilidad veo con especial claridad la brecha que se está abriendo con la adopción de la Inteligencia Artificial.
+Creemos que la IA puede ser una oportunidad histórica, pero solo si se acerca de forma útil y comprensible a quienes hoy están más lejos de ella: mujeres en búsqueda de empleo, emprendedoras, profesionales de sectores tradicionales o personas que necesitan actualizarse.
 
-Le escribo porque creemos que esta conversación puede ser especialmente relevante para [entidad]. La IA puede convertirse en una nueva capa de exclusión laboral femenina o en una oportunidad para abrir acceso a empleo cualificado, autonomía económica y nuevas competencias profesionales para las mujeres de [territorio].
+Le adjunto un dosier breve del proyecto que estamos impulsando con organismos públicos de Canarias. Nos gustaría valorar si tendría sentido para mujeres de {{territorio}} y, si encaja, proponer una primera acción gratuita de divulgación.
 
-Le adjunto un dosier breve sobre la línea de trabajo que estamos impulsando con organismos públicos de Canarias, con posibles líneas de colaboración. No lo planteamos como un programa cerrado, sino como punto de partida para una conversación: compartirles lo que estamos trabajando, escuchar mejor su contexto territorial, sus objetivos y prioridades, y valorar juntos si puede tener sentido una primera acción de divulgación gratuita en su territorio.
+¿Le encajaría una llamada breve la próxima semana?
 
-A partir de ahí, si vemos encaje, podríamos explorar posteriormente un proyecto a medida con objetivos concretos y KPIs de impacto.
-
-¿Tendría sentido que nos sentáramos a hablarlo en una primera reunión? Podemos adaptarnos al formato que les resulte más cómodo: llamada, videollamada o encuentro presencial.
-
-[derivacion_si_corresponde]
+{{derivacion_si_corresponde}}
 
 Un saludo,
 
-## Firma
-
-No incluir firma hardcodeada en el cuerpo si Gmail/GWS la inserta correctamente. Validar en smoke test que la firma aparece al crear/enviar draft real desde `gerencia@skilland.ai`.
+Romina Ojeda Brito
 
 ## Placeholders a revisar
 
-- `[nombre]`
-- `[entidad]`
-- `[territorio]`
-- `[derivacion_si_corresponde]`
+- `{{saludo_nombre}}`
+- `{{territorio}}`
+- `{{derivacion_si_corresponde}}`
 
-`[derivacion_si_corresponde]` solo se usa cuando el buzon sea generico o exista duda de interlocutor. Si no aplica, queda vacio.
+Reglas:
 
-Texto recomendado:
+- `{{saludo_nombre}}`: `Estimada {nombre}` / `Estimado {nombre}`; fallback `Estimado {nombre}` o `Estimado equipo`.
+- `{{territorio}}`: municipio para ayuntamientos; isla para cabildos.
+- `{{derivacion_si_corresponde}}`: solo cuando el buzon sea generico o exista duda de interlocutor.
+
+Texto de derivacion:
 
 ```text
-Si no es la persona adecuada, agradecería que pudiera derivarlo al área responsable de igualdad, empleo, mujer, políticas sociales o desarrollo local.
+Si cree que esta conversación corresponde a otra persona del equipo, le agradecería mucho que pudiera reenviárselo o indicarme con quién hablar.
 ```
 
 ## Nota para revision
 
-Esta version esta preparada para revision humana, no para envio automatico. Antes de crear drafts deben validarse asunto, variables minimas, adjunto, ausencia de LinkedIn de Romina, firma Gmail/GWS y tanda inicial.
+Esta version esta preparada para revision humana, no para envio automatico desde Funnel Academy. Antes de crear drafts deben validarse asunto, saludo, territorio, derivacion si aplica, adjunto, firma explicita en cuerpo y ausencia de LinkedIn de Romina.

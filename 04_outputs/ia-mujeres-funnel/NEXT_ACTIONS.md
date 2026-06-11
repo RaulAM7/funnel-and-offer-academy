@@ -8,10 +8,10 @@ CRM/GWS, previsiblemente en el repo `skilland-crm`.
 
 - Seleccionar primera tanda de 5 contactos.
 - Crear drafts desde `gerencia@skilland.ai`.
-- Validar firma Gmail/GWS.
+- Validar firma explicita en cuerpo.
 - Validar adjunto de Email 1: `Mujeres, IA y el Futuro del Trabajo · Dossier — SkilLand v2.pdf`.
 - Validar que Email 1 no incluye LinkedIn de Romina.
-- Revisar variables minimas de Email 1 v3: `[nombre]`, `[entidad]`, `[territorio]`, `[derivacion_si_corresponde]`.
+- Revisar variables minimas de Email 1 v4.1: `{{saludo_nombre}}`, `{{territorio}}`, `{{derivacion_si_corresponde}}`.
 - Enviar si todo esta correcto.
 - Registrar `draft_created`, `email_sent`, `reply_received`, `bounce_detected`, `meeting_proposed`, `meeting_booked`, `nurturing`.
 

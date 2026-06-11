@@ -1,5 +1,5 @@
 ---
-last_updated: "2026-06-09"
+last_updated: "2026-06-11"
 project: "ia-mujeres-funnel"
 phase: "phase-7-email-sequence-and-handoff"
 status: "ready_for_crm_gws_execution"
@@ -27,13 +27,13 @@ Disenar el funnel estrategico y operativo para la campana/línea SkilLand IA Muj
 
 - Fase 6 y Fase 6.1 completadas: estrategia, segmentacion, funnel map, retargeting conceptual y alineacion CRM/GWS.
 - Fase 7 minima completada: Email 1 final, Follow-up 1, Follow-up 2 con white paper, reglas de personalizacion y handoff operativo.
-- Iteracion 2026-06-09 completada: Email 1 v3 validado por humano y asset de primer contacto actualizado a dosier breve azul v2.
+- Iteracion 2026-06-11 completada: Email 1 v4.1 validado por humano, sincronizado con CRM y asset de primer contacto mantenido como dosier breve azul v2.
 - Este sprint estrategico/copy en Funnel Academy queda listo para cierre.
 - El siguiente paso operativo vive en CRM/GWS, previsiblemente en el repo `skilland-crm`.
 
 ## Entregables finales
 
-- `04_email_sequence/2026-06-09_email_01_v3.md`
+- `04_email_sequence/2026-06-11_email_01_v4_1.md`
 - `04_email_sequence/2026-06-07_follow_up_01.md`
 - `04_email_sequence/2026-06-07_follow_up_02_whitepaper.md`
 - `04_email_sequence/2026-06-07_personalization_rules.md`
@@ -47,9 +47,9 @@ Mover la ejecucion a CRM/GWS:
 
 - seleccionar tanda inicial;
 - crear drafts;
-- validar firma Gmail/GWS;
+- validar firma explicita en cuerpo;
 - validar adjunto Email 1: `Mujeres, IA y el Futuro del Trabajo · Dossier — SkilLand v2.pdf`;
-- revisar variables minimas de Email 1 v3 y reglas de derivacion;
+- revisar variables minimas de Email 1 v4.1 y reglas de derivacion;
 - enviar desde `gerencia@skilland.ai`;
 - registrar eventos;
 - gestionar respuestas manualmente.
