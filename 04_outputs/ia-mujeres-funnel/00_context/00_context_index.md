@@ -10,6 +10,10 @@ Documentos estratégicos del producto, dossier, deck y narrativa institucional.
 
 Documentos de ICP, scraping, dataset quality, fuentes y realidad de contactos.
 
+Documento nuevo ICP2:
+
+- `02_icp_and_data/2026-06-12_icp2_asociaciones_ong_definition.md` - definicion oficial de Asociaciones / ONG - Mujeres e Inclusion Tech como ampliacion social/comunitaria del funnel IA Mujeres.
+
 ## 03_crm_and_gws_status
 
 Estado operativo de CRM, Business Line, Campaign, importación, workflows, smoke tests y GWS CLI.
