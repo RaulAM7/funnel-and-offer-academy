@@ -97,6 +97,8 @@ Conservar siempre source_url.
 
 Campos requeridos en organizations_clean.csv:
 - organization_name
+- business_line
+- campaign
 - organization_type
 - territory
 - island
@@ -107,11 +109,13 @@ Campos requeridos en organizations_clean.csv:
 - source_url
 - source_type
 - source_confidence
+- high_confidence
 - macro_icp
 - icp_segment
 - sub_icp
 - copy_variant
 - priority
+- personalizacion_1
 - needs_manual_review
 - duplicate_possible
 - quality_flags
@@ -119,6 +123,8 @@ Campos requeridos en organizations_clean.csv:
 
 Campos requeridos en contacts_clean.csv:
 - organization_name
+- business_line
+- campaign
 - contact_name
 - role_title
 - department_area
@@ -132,11 +138,13 @@ Campos requeridos en contacts_clean.csv:
 - source_url
 - source_type
 - source_confidence
+- high_confidence
 - macro_icp
 - icp_segment
 - sub_icp
 - copy_variant
 - priority
+- personalizacion_1
 - generic_email
 - needs_manual_review
 - duplicate_possible
@@ -167,6 +175,8 @@ Reglas de calidad:
 - No deducir emails por patron.
 - No inventar nombres, cargos, programas, resultados, alianzas ni claims.
 - No afirmar foco de mujeres si la fuente solo demuestra inclusion general.
+- high_confidence = true solo cuando source_confidence = high y no existan flags graves.
+- personalizacion_1 debe ser una linea segura basada en fuente verificable; si no se puede generar sin inventar, dejar vacio y registrar la nota correspondiente.
 - Marcar needs_manual_review=true cuando haya duda de fuente, contacto, duplicado, territorio, sub_icp o copy_variant.
 - Marcar duplicate_possible=true cuando haya coincidencias relevantes por nombre, web, email o telefono.
 - Conservar source_url por cada registro.

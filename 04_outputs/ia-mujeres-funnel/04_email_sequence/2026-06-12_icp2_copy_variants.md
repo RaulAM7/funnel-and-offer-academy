@@ -19,6 +19,8 @@ ICP2 no duplica la secuencia. Mantiene:
 
 Las variantes solo adaptan angulo, `personalizacion_1`, prioridad y algunos bloques de copy para que una asociacion u ONG no reciba un mensaje pensado exclusivamente para una administracion publica.
 
+Los bloques definidos son deltas sobre Email 1 v4.1 y follow-ups vigentes. CRM/GWS debera componer el email completo usando la secuencia vigente + `copy_variant`; no deben enviarse los bloques delta de forma aislada.
+
 El asunto principal puede seguir siendo:
 
 ```text

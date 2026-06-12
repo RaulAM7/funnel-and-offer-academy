@@ -42,17 +42,21 @@ Entidades canarias verificables que encajen con:
 | Campo | Obligatorio | Nota |
 |---|---|---|
 | `organization_name` | Si | Nombre canonico. |
+| `business_line` | Si | Siempre `SkilLand IA Mujeres`. |
+| `campaign` | Si | Siempre `IA Mujeres 2026`. |
 | `organization_type` | Si | asociacion, fundacion, ONG, red, federacion, colectivo, otro. |
 | `territory` | Si | Canarias/isla/municipio si esta disponible. |
 | `website` | Recomendado | Web oficial si existe. |
 | `source_url` | Si | Fuente verificable. |
 | `source_type` | Si | web_oficial, registro_publico, directorio, noticia_institucional, otra_fuente_verificable. |
 | `source_confidence` | Si | high, medium, low. |
+| `high_confidence` | Si | true solo si `source_confidence=high` y no hay flags graves. |
 | `macro_icp` | Si | `asociaciones_ong_mujeres_inclusion_tech`. |
 | `icp_segment` | Si | `ICP2 - Asociaciones/ONG - Mujeres e Inclusion Tech`. |
 | `sub_icp` | Si | `mujeres_igualdad_steam` o `inclusion_tecnologica_impacto_social`. |
 | `copy_variant` | Si | `mujeres_steam` o `inclusion_tech_genero`. |
 | `priority` | Si | P0, P1, P2, Review. |
+| `personalizacion_1` | Recomendado | Linea segura basada en fuente verificable; dejar vacio si obliga a inventar. |
 | `contact_name` | Si existe | Solo si es publico y fiable. |
 | `role_title` | Si existe | No inventar. |
 | `email` | Si existe | No inventar ni deducir patrones. |
