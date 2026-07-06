@@ -1,5 +1,11 @@
 # 001_now — Academy Visual Layer Integration
 
+## Closure Note — 2026-07-04
+- Status: closed after material verification in HomeLab block/spec 007.
+- Scope closed: visual layer integration only.
+- This does **not** close the `academy` module; Academy remains live in `04_outputs/academy/STATE.md` and its continuity stays separate from this spec.
+- `ia-mujeres-funnel` remains in handoff logic and is not reopened by this closure.
+
 ## Outcome
 - The Academy module supports an on-demand visual layer after markdown distillation: state, UX, skills, agents, MCP config, and block-01 pilot canvas are all integrated.
 
